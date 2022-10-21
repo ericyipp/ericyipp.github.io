@@ -135,7 +135,7 @@ nav ul{
     gap: 1.5rem;
   }
   
-  .header {
+ .header {
     width: 75%;
     margin-top: 75px;
     margin-left: auto;
@@ -143,3 +143,16 @@ nav ul{
     bottom: 0;
     left: 0;
   }
+
+  
+ /* .spacer{
+    aspect-ratio: 9/6;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .layer1{
+    background-image:url(assets/blurry-gradient-haikei.svg);
+  }
+
