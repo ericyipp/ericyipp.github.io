@@ -1,11 +1,3 @@
-body{
-    --text-color: #ffffff;
-    --bkg-color: #24252E;
-}
-
-body {
-    background: var(--bkg-color);
-}
 @font-face {
     font-family: 'WorkSans';
     src: url(assets/WorkSans-Regular.ttf);
@@ -17,33 +9,264 @@ body {
     src: url(assets/WorkSans-Thin.ttf);
 }
 
-/*body.dark-theme{
-    --text-color: #ffffff;
-    --bkg-color: #24252E;
-    }
+h1{
+    font-family: 'WorkSans';
+    font-size: 45px;
+    color:white;
+    position: sticky;
+    border-radius: 10px;
+}
+
+h1:hover{
+    color: rgb(255, 255, 255);
+}
+
+h1::before{
+    content: attr(data-tooltip);
+    align-items: 20;
+    position: absolute;
+    display: flex;
+    flex-direction: top;
+    font-size: 20px;
+    padding:.5rem;
+    border-radius: 1px;
+    left: 100%;
+    width:100%;
+    bottom:85%;
+    clip-path:circle(0rem at left);
+    overflow:hidden;
+    transition:800ms all ease-in;
+}
+
+h1:hover::before{
+    clip-path:circle(20rem at right);
+
+}
+
+
+.dropMenu{
+    box-sizing: border-box;
+    font-family: 'WorkSans';
+    font-size: 45px;
+    color:white;
+}
+
+.dropMenu input{
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 20px 20px;
+    font-family: 'WorkSans';
+    border-radius: 10px;
+    background: #8d7c86;
+    box-shadow:  30px 30px 60px #7b6c75,
+                 -30px -30px 60px #9f8c97;
+    outline: none;
+    border: none;
+}
+
+.dropMenu .contents
+{
+    position: relative;
+    font-family: 'WorkSansLight';
+    top: 200px;
+    font-size: 25px;
+    color:white;
+    top: 25px;
+    width:100%;
+    left: 0;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #97858f, #7f7079);
+    box-shadow:  30px 30px 60px #7b6c75,
+                 -30px -5px 60px #9f8c97;
+    outline: none;
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s;
+    padding: 20px 20px;
+}
+
+.dropMenu.active .contents{
+    visibility: visible;
+    opacity: 1;
+}
+.dropMenu .contents div{
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+/*.dropMenu::before{
+    content: '';
+    position: absolute;
+    display: flex;
+    right: 95px;
+    top: 115px;
+    width: 12px;
+    height: 2px;
+    z-index: 1;
+    background-color: white;
+
+}
 */
+
+
+@media screen and (max-width: 600px)
+{
+    .dropMenu, .contents{
+        display: none;
+    }
+    h1{
+        text-align: center;
+    }
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 10px;
+        text-align: left;
+    }
+
+}
+.placeholder
+{   
+    font-family: 'WorkSans';
+
+    color:white;
+}
+
+.dropMenu::before{
+    content: url(/assets/expand_more_FILL0_wght400_GRAD0_opsz48.png);
+    position: absolute;
+}
+
+.head-text
+{
+    margin-top: 20%;
+    font-family: 'WorkSansLight';
+    font-size: 30px;
+    color:white;
+}
+
+
+/*.hero{
+    background-color: black;
+    aspect-ratio: 3/2;
+    background-image: url('assets/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+*/
+
+body, html{
+    background-color: #8d7c86;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
 
 nav{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+nav2 ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    text-align: right;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    text-align: right;
+}
+
+nav ul li a{
+    font-family: 'WorkSansLight';
+    font-size: 25px;
+    color:black;
+    text-decoration: none;
+    text-align: right;
+}
+
+.container{
     padding-top: 45px;
     padding-left: 8%;
     padding-right: 8%;
 }
 
 
-nav ul li{
-    list-style-type: none;
-    display:inline-block;
-    padding: 10px  10px;
+section {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 500px;
 }
 
-nav ul li a{
-    color: #ffffff;
-    text-decoration: none;
+.spacer{
+    aspect-ratio: 960/300;
+    height: 100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.layer1
+{
+    background-image: url(assets/layered-waves-haikei.svg);
+}
+
+.layer2
+{
+    background-image: url(assets/project\ waves.svg);
+}
+
+.layer3
+{
+    background-image: url(assets/about\ waves.svg);
+}
+
+.aboutText
+{
     font-family: 'WorkSansLight';
-    font-size: 30px;
+    font-size: 50px;
+    color:white;
+    text-align: center;
+    padding:10%;
+    background-color: #db9a9a;
+}
+
+
+.main
+{
+    padding: 180px 20vw;
+}
+
+.projects
+{
+    background-color: #b07b7b;
+    width: 100%;
+    height: 100%;
+}
+
+.contact
+{
+    background-color: #3e3339;
+    width: 100%;
+    list-style-type: none;
+    
 }
 
 #linkedin{
@@ -55,104 +278,12 @@ nav ul li a{
    border-bottom: none;
 } 
 
-h1 {
-    text-align: center;
-    display:inline;
-    text-decoration: none;
-    font-family: 'WorkSans';
-    color: white;
-    font-size: 45px;
-    cursor:pointer;
-}
-
-
-h1:hover{
-    color: rgb(255, 255, 255);
-}
-
-h1::before{
-    content: attr(data-tooltip);
-    position: absolute;
-    font-size: 22px;
-    background: var(--bkg-color);
-    padding:.5rem;
-    border-radius: 1px;
-    box-shadow: 0px 0px 10px(var(--bkg-color));
-    left:25%;
-    top:8%;
-    clip-path:circle(0rem at center);
-    overflow:hidden;
-    transition:800ms all ease-in;
-}
-
-h1:hover::before{
-    clip-path:circle(20rem at center);
-
-}
-
-h2 {
-    text-align: left;
-    font-family: 'WorkSans';
-    font-size: 45px;
-    cursor:pointer;
-    text-decoration: none;
-    color:#ffffff;
-}
-
-
-p1 {
-    font-family: 'WorkSansLight';
-    color:#ffffff;
-    font-size: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-#icon{
-    width: 35px;
-    display: inline;
-    float:right;
-    cursor:pointer;
-    color: var(--black);
-}
-
-nav ul{
-    flex: 1;
-    text-align: right;
-}
-
-.container {
-    max-width: 768px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-  }
-  
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
- .header {
-    width: 75%;
-    margin-top: 75px;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 0;
-    left: 0;
-  }
-
-  
- /* .spacer{
-    aspect-ratio: 9/6;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .layer1{
-    background-image:url(assets/blurry-gradient-haikei.svg);
-  }
+#github{
+    text-decoration: none !important;
+   border:0px !important;
+   outline:none;
+   border-width: 0px;
+   outline-width:0px;
+   border-bottom: none;
+} 
 
