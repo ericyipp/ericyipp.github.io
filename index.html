@@ -1,75 +1,64 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Eric's Portfolio</title>
-        <meta name="author" content="Eric Yip">
-    </head>
-    <body>
-        <div class="header">
-            <div class="container">
-                <nav>
-                    <h1 data-tooltip="hey! 👋">eric yip</h1>
-                    <ul>
-                         <li><div class="dropMenu">
-                            <input type="text" class="text2" readonly
-                            placeholder="contents">
-                         <div class="contents">
-                            <a href="#about1" style="color :white">about</a>
-                            <a href="#projects" style="color :white">projects</a>
-                            <a href="#contact"style="color :white">contact</a>
-                         </div>
-                        </div>
-                        </li>
-                    </ul>
-                </nav>
+<html lang="en"
+<head>
+    <title>ericyop.com</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Eric Yip">
+    <script src="script.js"></script>
+</head>
+
+
+<body>
+    <header class="header" id="header"</header>
+    <!-- <img src="assets/moon.png" id="icon"> -->
+<main>
+    <div class="hero">
+        <nav>
+            <h1>eric yip</h1>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="mailto: hi@ericyop.com">contact</a></li>
+                        <li><a id = "linkedin" href="https://www.linkedin.com/in/eric-yip-164552225/"><img src="assets/linkedin-white.png" alt="linkedin"
+                            width="30" height="30"</a></li>
+                        <li><a id = "github" href="https://github.com/ericyipp"><img src="assets/GitHub-Mark-Light-64px.png" alt="github"
+                                width="30" height="30" style="text-decoration: none;"</a></li>
+            </ul>
+        </nav>
+    </div>
+</main>
+<section id= "about">
+    <div class ="d">
+        <div class="row">
+            <div class ="aboutText">
+                <p2>
+                    about me
+                </p2>
             </div>
         </div>
-        <section class="main">
+    </div>
+</section>
+<section>
+<div id= "about">
+    <div class ="container">
+        <div class="row">
+            <div class ="aboutText">
+                <h3>
+                    projects
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<footer class="footer">
 
-        </section>
-        <div class="spacer layer3"></div>
-        <section>
-            <section class="aboutText">
-                <h1 id="about1" style="font-size:3vw">about me</h1>
-                <p style="font-size:2vw;">Hello! Eric Yip is a front-end developer based in the Bay Area. He currently attends Chabot College as a computer science student. He is currently working on other personal CS-related projects. You can contact him at hi@ericyop.com.</p>
-            </section>
-            <div class="spacer layer1"></div>
-            <section class="projects">
-                <h1 id="projects" style="font-size:3vw">projects</h1>
-                <p style="font-size:2vw;">soon come</p>
-            </section>
-            <div class="spacer layer2"></div>
-            <section class="contact">
-                <h1 id="contact">let's get in touch!</h1>
-                <nav2>
-                    <ul>
-                <li><a id = "linkedin" href="https://www.linkedin.com/in/eric-yip-164552225/"><img src="assets/linkedin.png" alt="linkedin"
-                    width="30" height="30"</a></li>
-                <li><a id = "github" href="https://github.com/ericyipp"><img src="assets/github.png" alt="github"
-                        width="30" height="30" style="text-decoration: none;"</a></li>
-                <li><a id = "email" href="mailto: ericyiip@gmail.com"><img src="assets/mail.png" alt="email"
-                            width="30" height="30" style="text-decoration: none;"</a></li>
-                    </ul>
-                </nav2>
-            </section>
-        </section>
-        <script>
-            let dropMenu = document.querySelector('.dropMenu');
-            dropMenu.onclick = function(){
-                dropMenu.classList.toggle('active')
-            }
-        </script>
-    </body>
-    <style>
-        ::placeholder{
-            color: white;
-            font-family: 'WorkSansLight';
-            font-size: 25px;
-            text-align: center;
-        }
-    </style>
+</footer>
+
+</body>
+
+
+
 </html>

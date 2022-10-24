@@ -100,19 +100,6 @@ h1:hover::before{
     cursor: pointer;
 }
 
-/*.dropMenu::before{
-    content: '';
-    position: absolute;
-    display: flex;
-    right: 95px;
-    top: 115px;
-    width: 12px;
-    height: 2px;
-    z-index: 1;
-    background-color: white;
-
-}
-*/
 
 
 @media screen and (max-width: 600px)
@@ -138,10 +125,6 @@ h1:hover::before{
     color:white;
 }
 
-.dropMenu::before{
-    content: url(/assets/expand_more_FILL0_wght400_GRAD0_opsz48.png);
-    position: absolute;
-}
 
 .head-text
 {
