@@ -138,11 +138,6 @@ h1:hover::before{
     color:white;
 }
 
-.dropMenu::before{
-    content: url(/assets/expand_more_FILL0_wght400_GRAD0_opsz48.png);
-    position: absolute;
-}
-
 .head-text
 {
     margin-top: 20%;
