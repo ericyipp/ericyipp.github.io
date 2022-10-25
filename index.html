@@ -1,75 +1,121 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Eric's Portfolio</title>
-        <meta name="author" content="Eric Yip">
-    </head>
-    <body>
-        <div class="header">
-            <div class="container">
-                <nav>
-                    <h1 data-tooltip="hey! 👋">eric yip</h1>
-                    <ul>
-                         <li><div class="dropMenu">
-                            <input type="text" class="text2" readonly
-                            placeholder="contents">
-                         <div class="contents">
-                            <a href="#about1" style="color :white">about</a>
-                            <a href="#projects" style="color :white">projects</a>
-                            <a href="#contact"style="color :white">contact</a>
-                         </div>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric's Portfolio</title>
+    <meta name="author" content="Eric Yip">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <h1 data-tooltip="hey! 👋">eric yip</h1>
+                <ul>
+                    <li>
+                        <div class="dropMenu">
+                            <input type="text" class="text2" readonly placeholder="contents">
+                            <div class="contents">
+                                <a href="#about1" style="color :white">about</a>
+                                <a href="#projects" style="color :white">projects</a>
+                                <a href="#contact" style="color :white">contact</a>
+                            </div>
                         </div>
-                        </li>
-                    </ul>
-                </nav>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="blob">
+        </div>
+        <div class="animated-title">
+            <div class="text-top">
+                <div>
+                    <span>hey</span>
+                    <span>there</span>
+                </div>
+            </div>
+            <div class="text-bottom">
+                <div>-eric</div>
             </div>
         </div>
-        <section class="main">
-
+        <svg id="visual" viewBox="0 0 1493 1300" width="1493" height="1300" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(770.047716808619 689.5528445974935)">
+                <path id="blob1"
+                    d="M353.5 -422.5C429.3 -277.7 442.2 -138.8 506.8 64.6C571.4 268.1 687.9 536.2 612.1 595.2C536.2 654.2 268.1 504.1 93.8 410.4C-80.6 316.6 -161.2 279.2 -313.7 220.2C-466.2 161.2 -690.6 80.6 -683.8 6.8C-677 -67 -439.1 -134.1 -286.6 -278.9C-134.1 -423.7 -67 -646.4 35.9 -682.3C138.8 -718.2 277.7 -567.3 353.5 -422.5"
+                    fill="none" stroke="#ffffff" stroke-width="6"></path>
+            </g>
+            <g transform="translate(739.7424521273078 705.2207006643079)" style="visibility: hidden;">
+                <path id="blob2"
+                    d="M283.2 -476.9C349.7 -452.1 374.5 -341.3 325.8 -247.5C277.2 -153.7 155.1 -76.8 140.8 -8.3C126.5 60.3 220 120.7 252.3 186.1C284.5 251.4 255.5 321.9 203.3 352.5C151 383.2 75.5 374.1 13.9 350C-47.7 325.9 -95.3 286.8 -173 270.8C-250.6 254.8 -358.3 261.9 -334.4 220.6C-310.6 179.3 -155.3 89.7 -130.1 14.6C-104.8 -60.5 -209.6 -121 -222.2 -142.9C-234.9 -164.9 -155.5 -148.3 -103.1 -181.2C-50.7 -214.1 -25.3 -296.5 41.5 -368.4C108.3 -440.3 216.7 -501.6 283.2 -476.9"
+                    fill="none" stroke="#ffffff" stroke-width="6"></path>
+            </g>
+            <g transform="translate(887.0595885058231 604.2692772050189)" style="visibility: hidden;">
+                <path id="blob3"
+                    d="M402.8 -398.2C514.3 -291.3 591.7 -145.7 576.6 -15.1C561.5 115.5 454 231 342.5 306.7C231 382.3 115.5 418.2 -76.3 494.5C-268.1 570.8 -536.2 687.6 -696.4 611.9C-856.6 536.2 -908.8 268.1 -808.2 100.5C-707.7 -67 -454.4 -134.1 -294.2 -240.9C-134.1 -347.7 -67 -494.4 39.3 -533.7C145.7 -573 291.3 -505 402.8 -398.2"
+                    fill="none" stroke="#ffffff" stroke-width="6"></path>
+            </g>
+        </svg>
+    </section>
+    <div class="spacer layer3"></div>
+    <section>
+        <section class="aboutText">
+            <h1 id="about1" style="font-size:3vw">about me</h1>
+            <p style="font-size:2vw;">Hello! Eric Yip is a front-end developer based in the Bay Area. He currently
+                attends Chabot College as a computer science student. He is currently working on other personal
+                CS-related projects. You can contact him at hi@ericyop.com.</p>
         </section>
-        <div class="spacer layer3"></div>
-        <section>
-            <section class="aboutText">
-                <h1 id="about1" style="font-size:3vw">about me</h1>
-                <p style="font-size:2vw;">Hello! Eric Yip is a front-end developer based in the Bay Area. He currently attends Chabot College as a computer science student. He is currently working on other personal CS-related projects. You can contact him at hi@ericyop.com.</p>
-            </section>
-            <div class="spacer layer1"></div>
-            <section class="projects">
-                <h1 id="projects" style="font-size:3vw">projects</h1>
-                <p style="font-size:2vw;">soon come</p>
-            </section>
-            <div class="spacer layer2"></div>
-            <section class="contact">
-                <h1 id="contact">let's get in touch!</h1>
-                <nav2>
-                    <ul>
-                <li><a id = "linkedin" href="https://www.linkedin.com/in/eric-yip-164552225/"><img src="assets/linkedin.png" alt="linkedin"
-                    width="30" height="30"</a></li>
-                <li><a id = "github" href="https://github.com/ericyipp"><img src="assets/github.png" alt="github"
-                        width="30" height="30" style="text-decoration: none;"</a></li>
-                <li><a id = "email" href="mailto: ericyiip@gmail.com"><img src="assets/mail.png" alt="email"
-                            width="30" height="30" style="text-decoration: none;"</a></li>
-                    </ul>
-                </nav2>
-            </section>
+        <div class="spacer layer1"></div>
+        <section class="projects">
+            <h1 id="projects" style="font-size:3vw">projects</h1>
+            <p style="font-size:2vw;">soon come</p>
         </section>
-        <script>
-            let dropMenu = document.querySelector('.dropMenu');
-            dropMenu.onclick = function(){
-                dropMenu.classList.toggle('active')
-            }
-        </script>
-    </body>
-    <style>
-        ::placeholder{
-            color: white;
-            font-family: 'WorkSansLight';
-            font-size: 25px;
-            text-align: center;
+        <div class="spacer layer2"></div>
+        <section class="contact">
+            <h1 id="contact">let's get in touch!</h1>
+            <nav2>
+                <ul>
+                    <li><a id="linkedin" href="https://www.linkedin.com/in/eric-yip-164552225/"><img
+                                src="assets/linkedin.png" alt="linkedin" width="30" height="30" </a></li>
+                    <li><a id="github" href="https://github.com/ericyipp"><img src="assets/github.png" alt="github"
+                                width="30" height="30" style="text-decoration: none;" </a></li>
+                    <li><a id="email" href="mailto: ericyiip@gmail.com"><img src="assets/mail.png" alt="email"
+                                width="30" height="30" style="text-decoration: none;" </a></li>
+                </ul>
+            </nav2>
+        </section>
+    </section>
+    <script>
+        let dropMenu = document.querySelector('.dropMenu');
+        dropMenu.onclick = function () {
+            dropMenu.classList.toggle('active')
         }
-    </style>
+    </script>
+    <script>
+        const tween = KUTE.fromTo(
+            '#blob1',
+            { path: '#blob1' },
+            { path: '#blob2' },
+            /*{ path:  '#blob3'}*/
+            { repeat: 999, duration: 10000, yoyo: true, morphPrecision: 1 }
+        ).start();
+    </script>
+</body>
+<style>
+    ::placeholder {
+        color: white;
+        font-family: 'WorkSansLight';
+        font-size: 25px;
+        text-align: center;
+    }
+</style>
+
 </html>
