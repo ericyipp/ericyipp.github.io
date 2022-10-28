@@ -9,7 +9,20 @@
     src: url(assets/WorkSans-Thin.ttf);
 }
 
+img, h1, h2, h3, p, li, ul {
+    margin: 2vw;
+    padding : 0;
+  }
+
 h1{
+    font-family: 'WorkSans';
+    font-size: 45px;
+    color:#1a1a1a;
+    position: sticky;
+    border-radius: 10px;
+}
+
+h2{
     font-family: 'WorkSans';
     font-size: 45px;
     color:white;
@@ -18,7 +31,7 @@ h1{
 }
 
 h1:hover{
-    color: rgb(255, 255, 255);
+    color: #1a1a1a;
 }
 
 h1::before{
@@ -48,7 +61,7 @@ h1:hover::before{
     box-sizing: border-box;
     font-family: 'WorkSans';
     font-size: 45px;
-    color:white;
+    color:#1a1a1a;
 }
 
 .dropMenu input{
@@ -60,10 +73,12 @@ h1:hover::before{
     cursor: pointer;
     padding: 20px 20px;
     font-family: 'WorkSans';
+    color: #1a1a1a;
+    background: #ffffff;
     border-radius: 10px;
-    background: #8d7c86;
-    box-shadow:  30px 30px 60px #7b6c75,
-                 -30px -30px 60px #9f8c97;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+                 -20px -20px 60px #ffffff;
     outline: none;
     border: none;
 }
@@ -74,16 +89,15 @@ h1:hover::before{
     font-family: 'WorkSansLight';
     top: 200px;
     font-size: 25px;
-    color:white;
+    color:#1a1a1a;
     top: 25px;
     width:100%;
     left: 0;
     text-align: center;
     border-radius: 10px;
-    background: linear-gradient(145deg, #97858f, #7f7079);
-    box-shadow:  30px 30px 60px #7b6c75,
-                 -30px -5px 60px #9f8c97;
-    outline: none;
+    background: #ffffff;
+    box-shadow:  -20px -20px 60px #d9d9d9,
+                 20px 20px 60px #ffffff;
     border: none;
     visibility: hidden;
     opacity: 0;
@@ -135,7 +149,7 @@ h1:hover::before{
 {   
     font-family: 'WorkSans';
 
-    color:white;
+    color:#1a1a1a;
 }
 
 .head-text
@@ -143,7 +157,7 @@ h1:hover::before{
     margin-top: 20%;
     font-family: 'WorkSansLight';
     font-size: 30px;
-    color:white;
+    color:#1a1a1a;
 }
 
 
@@ -158,17 +172,19 @@ h1:hover::before{
 */
 
 body, html{
-    background-color: #8d7c86;
+    background-color: white;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; 
+    overflow: overlay;
+
 }
 
 nav{
     display: flex;
     align-items: start;
     justify-content: space-between;
-    flex-wrap: wrap;
     text-align: right;
 }
 
@@ -177,7 +193,7 @@ nav2 ul li{
     list-style: none;
     margin: 10px 10px;
     text-align: right;
-
+    padding: 0;
 }
 
 nav ul li{
@@ -190,7 +206,7 @@ nav ul li{
 nav ul li a{
     font-family: 'WorkSansLight';
     font-size: 25px;
-    color:black;
+    color:#1a1a1a;
     text-decoration: none;
     text-align: right;
 }
@@ -212,7 +228,7 @@ section {
 
 .spacer{
     aspect-ratio: 960/300;
-    height: 100;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -236,30 +252,49 @@ section {
 .aboutText
 {
     font-family: 'WorkSansLight';
-    font-size: 50px;
-    color:white;
+    font-size: 50vw;
+    color:#1a1a1a;
     text-align: center;
     padding:10%;
-    background-color: #db9a9a;
+    background-color: white;
 }
 
 
 .main
 {
-    padding: 100px 20vw;
+    padding: 2vw;
     align-items: center;
 }
 
 .projects
 {
-    background-color: #b07b7b;
+    background-color: white;
     width: 100%;
     height: 100%;
 }
 
+.projectText
+{
+    font-family: 'WorkSansLight';
+    font-size: 50px;
+    color:#1a1a1a;
+}
+
+nav3 ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    text-align: center;
+    padding: 0;
+    font-family: 'WorkSansLight';
+    font-size: 50px;
+    color:#1a1a1a;
+
+}
+
 .contact
 {
-    background-color: #3e3339;
+    background-color: #1a1a1a;
     width: 100%;
     list-style-type: none;
     
@@ -269,8 +304,7 @@ section {
     text-decoration: none !important;
    border:0px !important;
    outline:none;
-   border-width: 0px;
-   outline-width:0px;
+
    border-bottom: none;
 } 
 
@@ -278,9 +312,7 @@ section {
     text-decoration: none !important;
    border:0px !important;
    outline:none;
-   border-width: 0px;
-   outline-width:0px;
-   border-bottom: none;
+border-bottom: none;
 } 
 
 .flip
@@ -301,12 +333,12 @@ section {
 
   
   .animated-title {
-    color: white;
+    color: #1a1a1a;
     font-family: 'WorkSansLight';
-    height: 90vmin;
+    height: 50vmin;
     left: 50%;
     position: absolute;
-    top: 35%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 90vmin;
   }
@@ -319,7 +351,7 @@ section {
     width: 100%;
   }
   .animated-title > div div {
-    font-size: 12vmin;
+    font-size: 5vmin;
     padding: 2vmin 0;
     position: absolute;
   }
@@ -327,9 +359,9 @@ section {
     display: block;
   }
   .animated-title > div.text-top {
-    /*border-bottom: .25vmin solid white;
+    border-bottom: .25vmin solid #1a1a1a;
     top: 0;
-    */
+    
   }
   
   .animated-title > div.text-top div {
@@ -342,7 +374,7 @@ section {
 
 
   .animated-title > div.text-top div span:first-child {
-    color: white;
+    color: #1a1a1a;
   }
   .animated-title > div.text-bottom {
     bottom: 0;
@@ -357,3 +389,4 @@ section {
     transform: translate(0, -100%);
 
   }
+  

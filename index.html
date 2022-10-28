@@ -21,9 +21,9 @@
                         <div class="dropMenu">
                             <input type="text" class="text2" readonly placeholder="contents">
                             <div class="contents">
-                                <a href="#about1" style="color :white">about</a>
-                                <a href="#projects" style="color :white">projects</a>
-                                <a href="#contact" style="color :white">contact</a>
+                                <a href="#about1" style="color :#1a1a1a;">about</a>
+                                <a href="#projects" style="color :#1a1a1a">projects</a>
+                                <a href="#contact" style="color :#1a1a1a">contact</a>
                             </div>
                         </div>
                     </li>
@@ -35,7 +35,7 @@
     <section class="main">
         <div class="blob">
         </div>
-        <!--<div class="animated-title">
+        <div class="animated-title">
             <div class="text-top">
                 <div>
                     <span>hey</span>
@@ -46,7 +46,7 @@
                 <div>-eric</div>
             </div>
         </div>
-    -->
+         <!--
         <svg id="visual" viewBox="0 0 1493 1300" width="1493" height="1300" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
             <g transform="translate(770.047716808619 689.5528445974935)">
@@ -65,31 +65,40 @@
                     fill="none" stroke="#ffffff" stroke-width="6"></path>
             </g>
         </svg>
+    -->
     </section>
     <div class="spacer layer3"></div>
     <section>
         <section class="aboutText">
-            <h1 id="about1" style="font-size:3vw">about me</h1>
+            <h1 id="about1" style="font-size:3vw">About Me</h1>
             <p style="font-size:2vw;">Hello! Eric Yip is a front-end developer based in the Bay Area. He currently
                 attends Chabot College as a computer science student. He is currently working on other personal
                 CS-related projects. You can contact him at hi@ericyop.com.</p>
         </section>
+    <section class ="projectsButton"></section>
         <div class="spacer layer1"></div>
         <section class="projects">
-            <h1 id="projects" style="font-size:3vw">projects</h1>
-            <p style="font-size:2vw;">soon come</p>
+            <h1 id="projects" style="font-size:3vw">Projects (not done)</h1>
+                <div id="projectText">
+                    <nav3>
+                        <ul>
+                            <li><p>Apple.com Checkout Script</p>
+                            <li><p>Website</p>
+                        </ul>
+                    </nav3>
+                </div>
         </section>
-        <div class="spacer layer2"></div>
+            <div class="spacer layer2"></div>
         <section class="contact">
-            <h1 id="contact">let's get in touch!</h1>
+            <h2 id="contact">Let's get in touch!</h2>
             <nav2>
                 <ul>
                     <li><a id="linkedin" href="https://www.linkedin.com/in/eric-yip-164552225/"><img
-                                src="assets/linkedin.png" alt="linkedin" width="30" height="30" </a></li>
+                                src="assets/linkedin.png" alt="linkedin" width="50" height="50" </a></li>
                     <li><a id="github" href="https://github.com/ericyipp"><img src="assets/github.png" alt="github"
-                                width="30" height="30" style="text-decoration: none;" </a></li>
+                                width="50" height="50" style="text-decoration: none;" </a></li>
                     <li><a id="email" href="mailto: ericyiip@gmail.com"><img src="assets/mail.png" alt="email"
-                                width="30" height="30" style="text-decoration: none;" </a></li>
+                                width="50" height="50" style="text-decoration: none;" </a></li>
                 </ul>
             </nav2>
         </section>
@@ -112,11 +121,34 @@
 </body>
 <style>
     ::placeholder {
-        color: white;
+        color: #1a1a1a;
         font-family: 'WorkSansLight';
         font-size: 25px;
         text-align: center;
     }
+    
+    html::-webkit-scrollbar{
+        background-color: transparent;
+        width: 5px;
+    }
+
+    html::-webkit-scrollbar-thumb{
+        background-color: #1a1a1a;
+        border: .25em;
+        border-radius: 1vw;
+    }
+
+    html::-webkit-scrollbar-track{
+        background-color: white;
+        border-radius: 2vw;
+        margin-block: .5em;
+    }
+
+    body{
+        overflow: overlay;
+    }
+
+
 </style>
 
 </html>
