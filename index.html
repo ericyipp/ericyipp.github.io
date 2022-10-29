@@ -85,8 +85,15 @@
                 <div id="projectText">
                     <nav3>
                         <ul>
-                            <li><p>Apple.com Checkout Script</p>
-                            <li><p>Website</p>
+                            <div class = container2>
+                                <li><button type="submit" class ="btn" onclick="openPopup()">Apple Checkout Script</button>
+                                <div class="popup" id="popup">
+                                    <img src="assets/appleDemo.gif">
+                                    <h3>Auto-checkout script for products on Apple.com</h3>
+                                    <p>Python & Selenium</p>
+                                    <button type="button" onclick="closePopup()">close</button>
+                                </div>
+                            </div>
                         </ul>
                     </nav3>
                 </div>
@@ -120,6 +127,19 @@
             /*{ path:  '#blob3'}*/
             { repeat: 999, duration: 10000, yoyo: true, morphPrecision: 1 }
         ).start();
+
+
+    </script>
+    <script>
+                let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
     </script>
 </body>
 <style>
