@@ -252,7 +252,7 @@ section {
 .aboutText
 {
     font-family: 'WorkSansLight';
-    font-size: 50vw;
+    font-size: 3vw;
     color:#1a1a1a;
     text-align: center;
     padding:10%;
@@ -273,12 +273,6 @@ section {
     height: 100%;
 }
 
-.projectText
-{
-    font-family: 'WorkSansLight';
-    font-size: 50px;
-    color:#1a1a1a;
-}
 
 nav3 ul li{
     display: inline-block;
@@ -287,7 +281,7 @@ nav3 ul li{
     text-align: center;
     padding: 0;
     font-family: 'WorkSansLight';
-    font-size: 50px;
+    font-size: 2vw;
     color:#1a1a1a;
 
 }
