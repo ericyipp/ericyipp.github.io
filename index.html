@@ -9,9 +9,16 @@
     <title>Eric's Portfolio</title>
     <meta name="author" content="Eric Yip">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!--<button onclick="returnHome()" id="returnHome">
+        <img src="assets/up-arrow-pngrepo-com.png" width="25" height="25">
+    </button>
+-->
     <div class="header">
         <div class="container">
             <nav>
@@ -66,6 +73,7 @@
             </g>
         </svg>
     -->
+
     </section>
     <div class="spacer layer3"></div>
     <section>
@@ -115,6 +123,7 @@
             </nav2>
         </section>
     </section>
+
     <script>
         let dropMenu = document.querySelector('.dropMenu');
         dropMenu.onclick = function () {
@@ -149,6 +158,27 @@
         }
     </script>
 -->
+
+<script>
+    let returnHomeButton =document.getElementById("returnHome")
+    window.onscroll = function() {
+        scrollFunction()
+    };
+    function scrollFunction() {
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+    returnHomeButton.style.display = "block";
+  } else {
+    returnHomeButton.style.display = "none";
+  }
+}
+
+function returnHome() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+
+</script>
+
 </body>
 <style>
     ::placeholder {
