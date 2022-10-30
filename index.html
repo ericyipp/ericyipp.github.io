@@ -81,18 +81,20 @@
     <section class ="projectsButton"></section>
         <div class="spacer layer1"></div>
         <section class="projects">
-            <h1 id="projects" style="font-size:3vw">Projects (not done)</h1>
+            <h1 id="projects" style="font-size:3vw">Projects</h1>
                 <div id="projectText">
                     <nav3>
                         <ul>
                             <div class = container2>
-                                <li><button type="submit" class ="btn" onclick="openPopup()">Apple Checkout Script</button>
-                                <div class="popup" id="popup">
+                                <!--<li><button type="submit" class ="btn" onclick="toggle()">Apple Checkout Script</button>-->
+                                <div class="window">
                                     <img src="assets/appleDemo.gif">
-                                    <h3>Auto-checkout script for products on Apple.com</h3>
+                                    <h3>Apple.com Auto-Checkout Script</h3>
                                     <p>Python & Selenium</p>
-                                    <button type="button" onclick="closePopup()">close</button>
+                                    <!-- <button type="button" onclick="closePopup()">close</button> -->
                                 </div>
+
+
                             </div>
                         </ul>
                     </nav3>
@@ -130,17 +132,23 @@
 
 
     </script>
-    <script>
-                let popup = document.getElementById("popup");
+    <!--<script>
+        let popup = document.getElementById("popup");
+        function toggle(){
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active')
+            popup.classList.add("open-popup")
+        }
 
-function openPopup(){
-    popup.classList.add("open-popup");
-}
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
 
-function closePopup(){
-    popup.classList.remove("open-popup");
-}
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
     </script>
+-->
 </body>
 <style>
     ::placeholder {
