@@ -9,6 +9,7 @@
     src: url(assets/WorkSans-Thin.ttf);
 }
 
+
 img, h1, h2, h3, p, li, ul {
     margin: 2vw;
     padding : 0;
@@ -33,22 +34,27 @@ img, h1, h2, h3, p, li, ul {
 
 
 h1{
-    font-family: 'Syne';
+    font-family: 'Inter';
     font-size: 45px;
+    font-weight:800;
     color:#1a1a1a;
     position: sticky;
     border-radius: 10px;
 }
 
 h2{
-    font-family: 'Syne';
+    font-family: 'Inter';
     font-size: 45px;
     color:white;
     position: sticky;
     border-radius: 10px;
 }
 
-
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 h1:hover{
     color: #1a1a1a;
