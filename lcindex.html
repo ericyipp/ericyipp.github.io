@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Risk Analysis Project</title>
+    <style>
+        body { font-family: WorkSans, sans-serif; line-height: 1.6; color: #000000; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1, h2 { color: #1a1a1a; }
+        img { max-width: 100%; height: auto; margin: 20px 0; }
+        .section { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lung Cancer Risk Analysis Project</h1>
+    </header>
+
+    <section class="section">
+        <h2>Project Overview</h2>
+        <p>This project aims to analyze risk factors associated with lung cancer using machine learning techniques. We used a dataset containing various health indicators and developed a logistic regression model to predict lung cancer risk.</p>
+        <a href="notebook.html" class="notebook-link">
+            <p>Jupyter Notebook</p>
+          </a>
+    </section>
+
+    <section class="section">
+        <h2>Data Visualization</h2>
+        <h3>Correlation Heatmap</h3>
+        <img src="assets/lungcancercorr.png" alt="Correlation Heatmap">
+        <p>Key findings from the heatmap:</p>
+        <ul>
+            <li>Strong positive correlation between Anxiety and Yellow Fingers (0.55)</li>
+            <li>Moderate correlation between Shortness of Breath and Fatigue (0.39)</li>
+            <li>Surprisingly low correlation between Smoking and Lung Cancer (0.053)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Model Performance</h2>
+        <p>Support Vector Classifier model achieved the following performance:</p>
+        <ul>
+            <li>Accuracy: 94.642%</li>
+            <li>Mean Cross-Validation Score: 86.23%</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Key Insights</h2>
+        <ul>
+            <li>Age and Gender show notable correlations with Lung Cancer risk</li>
+            <li>Chronic Disease has weaker correlations than expected with most factors</li>
+            <li>Psychological factors (Anxiety, Peer Pressure) show interesting relationships with physical symptoms</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Future Work</h2>
+        <p>Next steps for this project include:</p>
+        <ul>
+            <li>Exploring advanced feature engineering techniques</li>
+            <li>Comparing performance with other machine learning algorithms</li>
+            <li>Creating more data visualizations</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Project by Eric Yip - Statistics</p>
+    </footer>
+</body>
+</html>

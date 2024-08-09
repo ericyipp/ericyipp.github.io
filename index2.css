@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url(assets/WorkSans-Regular.ttf);
+
+}
+
+@font-face {
+    font-family: 'WorkSansLight';
+    src: url(assets/WorkSans-Thin.ttf);
+}
+
+body, html{
+    background-color: white;
+}
+
+
+.notebook-link{
+    text-decoration: underline;
+    text-decoration-color: #adadad;
+}
+.notebook-link img {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .notebook-link h3 {
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .notebook-link:hover h3 {
+    color: #1a1a1a
+  }

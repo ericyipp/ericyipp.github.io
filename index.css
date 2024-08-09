@@ -9,6 +9,10 @@
     src: url(assets/WorkSans-Thin.ttf);
 }
 
+@font-face{
+    font-family: 'he';
+    src: url(assets/HelveticaLt.ttf)
+}
 
 img, h1, h2, h3, p, li, ul {
     margin: 2vw;
@@ -262,17 +266,17 @@ section {
 }
 .layer1
 {
-    background-image: url(assets/middle.svg);
+    background-image: url(assets/middle2.svg);
 }
 
 .layer2
 {
-    background-image: url(assets/bottom.svg);
+    background-image: url(assets/bottom2.svg);
 }
 
 .layer3
 {
-    background-image: url(assets/top.svg);
+    background-image: url(assets/top2.svg);
 }
 
 .aboutText
@@ -317,6 +321,23 @@ nav3 ul li{
     color:#1a1a1a;
 
 }
+
+.project-link{
+    text-decoration: underline;
+    text-decoration-color: #adadad;
+}
+
+.project-link img {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .project-link h3 {
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .project-link:hover h3 {
+    color: #1a1a1a
+  }
 
 .contact
 {
