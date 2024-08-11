@@ -19,7 +19,7 @@
 
     <section class="section">
         <h2>Project Overview</h2>
-        <p>This project aims to analyze risk factors associated with lung cancer using machine learning techniques. I used a dataset containing various health indicators and developed a Support Vector Classifier model to predict lung cancer risk.</p>
+        <p>This project aims to analyze risk factors associated with lung cancer using machine learning techniques. I used a dataset containing various health indicators and developed a logistic regression model to predict lung cancer risk.</p>
         <a href="notebook.html" class="notebook-link">
             <p>Jupyter Notebook</p>
           </a>
@@ -28,21 +28,20 @@
     <section class="section">
         <h2>Data Visualization</h2>
         <h3>Correlation Heatmap</h3>
-        <img src="assets/lungcancercorr.png" alt="Correlation Heatmap">
+        <img src="assets/output.png" alt="Correlation Heatmap">
         <p>Key findings from the heatmap:</p>
         <ul>
-            <li>Strong positive correlation between Anxiety and Yellow Fingers (0.55)</li>
+            <li>Strong positive correlation between Anxiety and Yellow Fingers (0.59)</li>
             <li>Moderate correlation between Shortness of Breath and Fatigue (0.39)</li>
-            <li>Surprisingly low correlation between Smoking and Lung Cancer (0.053)</li>
         </ul>
     </section>
 
     <section class="section">
         <h2>Model Performance</h2>
-        <p>Support Vector Classifier model achieved the following performance:</p>
+        <p>Logistic Regression model achieved the following performance:</p>
         <ul>
-            <li>Accuracy: 94.642%</li>
-            <li>Mean Cross-Validation Score: 86.23%</li>
+            <li>Accuracy: 96.428%</li>
+            <li>Mean Cross-Validation Score: 90.57%</li>
         </ul>
     </section>
 
@@ -52,6 +51,18 @@
             <li>Age and Gender show notable correlations with Lung Cancer risk</li>
             <li>Chronic Disease has weaker correlations than expected with most factors</li>
             <li>Psychological factors (Anxiety, Peer Pressure) show interesting relationships with physical symptoms</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Flask Application</h2>
+        <img src="assets/flask.png" alt="Application">
+        <ul>
+            <li>Built using Flask framework</li>
+            <li>Integrates the trained logistic regression model</li>
+            <li>Implements data preprocessing to handle user inputs</li>
+            <li>Real-time risk prediction based on user inputs</li>
+            <li>Clear display of predicted risk percentage</li>
         </ul>
     </section>
 
