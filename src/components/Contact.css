@@ -1,0 +1,129 @@
+/* ── Contact section ──────────────────────────────────────── */
+.contact {
+  position: relative;
+  padding: var(--space-4xl) var(--page-gutter);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.contact-heading .section-idx {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+}
+
+.contact-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto var(--space-2xl);
+  line-height: 1.7;
+}
+
+/* ── Social links ─────────────────────────────────────────── */
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.contact-icon:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-5px) rotate(-3deg);
+  box-shadow: 0 8px 28px var(--accent-glow);
+}
+
+.contact-icon:nth-child(2):hover {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 28px var(--accent-2-glow);
+  transform: translateY(-5px) rotate(3deg);
+}
+
+.contact-icon:nth-child(3):hover {
+  color: var(--accent-3);
+  border-color: var(--accent-3);
+  box-shadow: 0 8px 28px var(--accent-3-glow);
+  transform: translateY(-5px) rotate(-2deg);
+}
+
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ── Email CTA ────────────────────────────────────────────── */
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: #fff;
+  transition: all var(--duration-base) var(--ease-out);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.contact-email:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.footer {
+  padding: var(--space-xl) var(--page-gutter);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.footer-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.footer-text a {
+  color: var(--accent);
+  transition: color var(--duration-fast);
+}
+
+.footer-text a:hover {
+  color: var(--accent-hover);
+}

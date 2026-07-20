@@ -1,0 +1,130 @@
+/* ── About section ────────────────────────────────────────── */
+.about {
+  position: relative;
+  padding: var(--space-4xl) var(--page-gutter);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.about-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.about-heading .section-idx {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Skill pills ──────────────────────────────────────────── */
+.skills-group {
+  margin-bottom: var(--space-xl);
+}
+
+.skills-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.skill-pill {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-base) var(--ease-out);
+  cursor: default;
+}
+
+.skill-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+/* Alternate colors for visual variety */
+.skills-group:nth-child(2) .skill-pill:hover {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+  box-shadow: 0 6px 20px var(--accent-2-glow);
+}
+
+.skills-group:nth-child(3) .skill-pill:hover {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
+  box-shadow: 0 6px 20px var(--accent-3-glow);
+}
+
+/* ── Status pill ──────────────────────────────────────────── */
+.about-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2d8a64;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-full);
+  background: rgba(67, 201, 167, 0.1);
+  border: 1.5px solid rgba(67, 201, 167, 0.25);
+  margin-bottom: var(--space-xl);
+}
+
+.about-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-3);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(67, 201, 167, 0.4); }
+  50%      { opacity: 0.7; box-shadow: 0 0 0 6px rgba(67, 201, 167, 0); }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
