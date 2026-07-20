@@ -85,7 +85,7 @@ function TimelineCard({ item, index }) {
   return (
     <ScrollReveal delay={index * 0.1}>
       <motion.div
-        className="timeline-card"
+        className={`timeline-card timeline-card--c${index % 5}`}
         onClick={() => isMobile && setExpanded(!expanded)}
         layout
       >
@@ -218,7 +218,7 @@ export default function Resume() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          ↓ download full resume (pdf)
+          ↓ download resume (pdf)
         </a>
       </ScrollReveal>
     </section>

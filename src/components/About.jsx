@@ -14,17 +14,18 @@ export default function About() {
         {/* Left column — bio */}
         <div>
           <ScrollReveal>
+            <div className="avatar-card">
+              <div className="avatar-card-inner">
+                <img src="/pictures/headshot.png" className="avatar-photo" alt="Eric Yip" />
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
             <h2 className="about-heading">
               <span className="section-idx">02. about</span>
               A bit about me
             </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <div className="about-status">
-              <span className="about-status-dot" />
-              let's connect!
-            </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
@@ -49,9 +50,9 @@ export default function About() {
         </div>
 
         {/* Right column — skills */}
-        <div>
+        <div className="skills-groups">
           <ScrollReveal delay={0.1}>
-            <div className="skills-group">
+            <div className="skills-group skills-group--ml">
               <div className="skills-label">machine learning</div>
               <div className="skills-list">
                 {ML_LIBS.map((s) => (
@@ -62,7 +63,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
-            <div className="skills-group">
+            <div className="skills-group skills-group--ds">
               <div className="skills-label">data science</div>
               <div className="skills-list">
                 {DS_LIBS.map((s) => (
@@ -73,7 +74,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="skills-group">
+            <div className="skills-group skills-group--lang">
               <div className="skills-label">programming languages</div>
               <div className="skills-list">
                 {LANGUAGES.map((s) => (
@@ -84,7 +85,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.25}>
-            <div className="skills-group">
+            <div className="skills-group skills-group--web">
               <div className="skills-label">web technologies</div>
               <div className="skills-list">
                 {WEB.map((s) => (
@@ -95,7 +96,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <div className="skills-group">
+            <div className="skills-group skills-group--tools">
               <div className="skills-label">tools</div>
               <div className="skills-list">
                 {TOOLS.map((s) => (

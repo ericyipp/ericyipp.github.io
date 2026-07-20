@@ -38,6 +38,40 @@
   margin-bottom: var(--space-xl);
 }
 
+/* ── Avatar / character card ──────────────────────────────── */
+.avatar-card {
+  width: 168px;
+  height: 168px;
+  padding: 4px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-hover);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--duration-base) var(--ease-out);
+  margin-bottom: var(--space-xl);
+}
+
+.avatar-card:hover {
+  transform: scale(1.03);
+}
+
+.avatar-card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--radius-lg) - 3px);
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ── Skill pills ──────────────────────────────────────────── */
 .skills-group {
   margin-bottom: var(--space-xl);
@@ -80,51 +114,50 @@
   box-shadow: 0 6px 20px var(--accent-glow);
 }
 
-/* Alternate colors for visual variety */
-.skills-group:nth-child(2) .skill-pill:hover {
+/* Alternate colors for visual variety — one pop color per skill group */
+.skills-group--ml .skill-pill:hover {
   border-color: var(--accent-2);
   color: var(--accent-2);
   box-shadow: 0 6px 20px var(--accent-2-glow);
 }
 
-.skills-group:nth-child(3) .skill-pill:hover {
+.skills-group--ds .skill-pill:hover {
   border-color: var(--accent-3);
   color: var(--accent-3);
   box-shadow: 0 6px 20px var(--accent-3-glow);
 }
 
-/* ── Status pill ──────────────────────────────────────────── */
-.about-status {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #2d8a64;
-  padding: 0.45rem 1.1rem;
-  border-radius: var(--radius-full);
-  background: rgba(67, 201, 167, 0.1);
-  border: 1.5px solid rgba(67, 201, 167, 0.25);
-  margin-bottom: var(--space-xl);
+.skills-group--lang .skill-pill:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  box-shadow: 0 6px 20px var(--accent-red-glow);
 }
 
-.about-status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent-3);
-  animation: pulse-dot 2s ease-in-out infinite;
+.skills-group--web .skill-pill:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  box-shadow: 0 6px 20px var(--accent-blue-glow);
 }
 
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(67, 201, 167, 0.4); }
-  50%      { opacity: 0.7; box-shadow: 0 0 0 6px rgba(67, 201, 167, 0); }
+.skills-group--tools .skill-pill:hover {
+  border-color: var(--accent-warm);
+  color: var(--accent-warm);
+  box-shadow: 0 6px 20px var(--accent-warm-glow);
 }
 
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+  }
+
+  .skills-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg) var(--space-md);
+  }
+
+  .skills-groups .skills-group {
+    margin-bottom: 0;
   }
 }

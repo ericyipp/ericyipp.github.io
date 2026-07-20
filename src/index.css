@@ -27,7 +27,14 @@
   --accent-3:       #43c9a7;
   --accent-3-glow:  rgba(67, 201, 167, 0.2);
 
-  --accent-warm:    #f4a261;
+  --accent-warm:      #f4a261;
+  --accent-warm-glow: rgba(244, 162, 97, 0.2);
+
+  --accent-red:      #e14848;
+  --accent-red-glow: rgba(225, 72, 72, 0.2);
+
+  --accent-blue:      #2f80ed;
+  --accent-blue-glow: rgba(47, 128, 237, 0.2);
 
   --border:         rgba(26, 26, 26, 0.06);
   --border-hover:   rgba(26, 26, 26, 0.12);

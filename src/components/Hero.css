@@ -37,35 +37,40 @@
   margin-bottom: var(--space-lg);
 }
 
-.hero-name-accent {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* ── Scrolling title banner ───────────────────────────────── */
+.hero-marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: var(--space-2xl);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }
 
-/* ── Typing effect ────────────────────────────────────────── */
-.hero-typer {
+.hero-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.hero-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-right: 0.9rem;
   font-family: var(--font-mono);
   font-size: clamp(0.9rem, 1.4vw, 1.1rem);
   color: var(--text-secondary);
-  min-height: 1.8em;
-  margin-bottom: var(--space-2xl);
+  white-space: nowrap;
 }
 
-.hero-typer-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background: var(--accent);
-  margin-left: 2px;
-  vertical-align: text-bottom;
-  animation: cursor-blink 1s steps(1) infinite;
+.hero-marquee-dot {
+  color: var(--accent);
+  opacity: 0.4;
 }
 
-@keyframes cursor-blink {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ── CTA buttons ──────────────────────────────────────────── */

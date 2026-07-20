@@ -1,4 +1,3 @@
-import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import './Hero.css'
 
@@ -9,63 +8,7 @@ const TITLES = [
   'Data Science @ UC Berkeley',
 ]
 
-const TYPE_SPEED  = 70
-const DELETE_SPEED = 40
-const HOLD_MS     = 2200
-const PAUSE_MS    = 400
-
 export default function Hero() {
-  const [display, setDisplay] = useState('')
-  const [titleIdx, setTitleIdx] = useState(0)
-  const [phase, setPhase] = useState('typing') // typing | hold | deleting | pause
-
-  const currentTitle = TITLES[titleIdx]
-
-  const tick = useCallback(() => {
-    switch (phase) {
-      case 'typing':
-        if (display.length < currentTitle.length) {
-          setDisplay(currentTitle.slice(0, display.length + 1))
-        } else {
-          setPhase('hold')
-        }
-        break
-      case 'deleting':
-        if (display.length > 0) {
-          setDisplay(display.slice(0, -1))
-        } else {
-          setPhase('pause')
-        }
-        break
-      default:
-        break
-    }
-  }, [display, phase, currentTitle])
-
-  useEffect(() => {
-    let delay
-    switch (phase) {
-      case 'typing':   delay = TYPE_SPEED;   break
-      case 'deleting': delay = DELETE_SPEED;  break
-      case 'hold':     delay = HOLD_MS;       break
-      case 'pause':    delay = PAUSE_MS;      break
-      default:         delay = TYPE_SPEED
-    }
-
-    const timer = setTimeout(() => {
-      if (phase === 'hold') {
-        setPhase('deleting')
-      } else if (phase === 'pause') {
-        setTitleIdx((prev) => (prev + 1) % TITLES.length)
-        setPhase('typing')
-      } else {
-        tick()
-      }
-    }, delay)
-
-    return () => clearTimeout(timer)
-  }, [display, phase, tick])
-
   // Stagger children
   const container = {
     hidden: {},
@@ -89,12 +32,18 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1 className="hero-name" variants={child}>
-          Eric <span className="hero-name-accent">Yip</span>
+          Eric Yip
         </motion.h1>
 
-        <motion.div className="hero-typer" variants={child}>
-          {display}
-          <span className="hero-typer-cursor" />
+        <motion.div className="hero-marquee" variants={child}>
+          <div className="hero-marquee-track">
+            {[...TITLES, ...TITLES].map((title, i) => (
+              <span className="hero-marquee-item" key={i}>
+                {title}
+                <span className="hero-marquee-dot">•</span>
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div className="hero-ctas" variants={child}>

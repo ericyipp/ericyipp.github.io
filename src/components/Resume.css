@@ -119,15 +119,22 @@
   height: 12px;
   border-radius: 50%;
   background: var(--bg-primary);
-  border: 2.5px solid var(--accent);
+  border: 2.5px solid var(--tag-color, var(--accent));
   z-index: 1;
   transition: all var(--duration-base) var(--ease-out);
 }
 
 .timeline-card:hover::before {
-  background: var(--accent);
+  background: var(--tag-color, var(--accent));
   box-shadow: 0 0 12px var(--accent-glow);
 }
+
+/* One pop color per card, cycling through the palette */
+.timeline-card--c0 { --tag-color: var(--accent-2); }
+.timeline-card--c1 { --tag-color: var(--accent-3); }
+.timeline-card--c2 { --tag-color: var(--accent-red); }
+.timeline-card--c3 { --tag-color: var(--accent-blue); }
+.timeline-card--c4 { --tag-color: var(--accent-warm); }
 
 .timeline-card-header {
   display: flex;
@@ -186,8 +193,8 @@
   padding: 0.22rem 0.6rem;
   border-radius: var(--radius-sm);
   background: var(--accent-subtle);
-  color: var(--accent);
-  border: 1px solid rgba(232, 86, 127, 0.12);
+  color: var(--tag-color, var(--accent));
+  border: 1px solid color-mix(in srgb, var(--tag-color, var(--accent)) 15%, transparent);
 }
 
 /* ── Expand/collapse ──────────────────────────────────────── */
@@ -252,5 +259,12 @@
 
   .timeline-card {
     cursor: pointer;
+  }
+
+  .resume-download {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
