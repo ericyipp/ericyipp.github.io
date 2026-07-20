@@ -1,7 +1,19 @@
+import { useState } from 'react'
 import ScrollReveal from './ScrollReveal'
 import './Contact.css'
 
+const EMAIL = 'ericyyip@gmail.com'
+
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  function handleCopy() {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
+
   return (
     <>
       <section className="contact" id="contact">
@@ -65,9 +77,17 @@ export default function Contact() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <a className="contact-email" href="mailto:ericyyip@gmail.com">
-            ericyyip@gmail.com →
-          </a>
+          <div className="contact-email-wrapper">
+            <button
+              className={`contact-email${copied ? ' copied' : ''}`}
+              onClick={handleCopy}
+              aria-label="Copy email to clipboard"
+            >
+              <span className="email-text">{EMAIL} →</span>
+              <span className="copied-text">Copied!</span>
+            </button>
+            <span className="copy-tooltip">Copy to clipboard</span>
+          </div>
         </ScrollReveal>
       </section>
 

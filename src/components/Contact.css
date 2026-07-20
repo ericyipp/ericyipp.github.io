@@ -83,7 +83,46 @@
 }
 
 /* ── Email CTA ────────────────────────────────────────────── */
+.contact-email-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-email-wrapper:hover .copy-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.copy-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(0px);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.copy-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.75);
+}
+
 .contact-email {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
@@ -94,14 +133,46 @@
   border-radius: var(--radius-full);
   background: var(--accent);
   color: #fff;
+  border: none;
+  cursor: pointer;
   transition: all var(--duration-base) var(--ease-out);
   box-shadow: 0 4px 16px var(--accent-glow);
+  overflow: hidden;
 }
 
 .contact-email:hover {
   background: var(--accent-hover);
   transform: translateY(-3px);
   box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.contact-email .email-text,
+.contact-email .copied-text {
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.contact-email .copied-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(200%);
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.contact-email.copied .email-text {
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+.contact-email.copied .copied-text {
+  transform: translateX(-50%) translateY(0%);
+  opacity: 1;
+}
+
+.contact-email.copied {
+  background: #22c55e;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35);
 }
 
 /* ── Footer ───────────────────────────────────────────────── */
