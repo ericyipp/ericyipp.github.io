@@ -213,7 +213,7 @@ export default function Resume() {
       <ScrollReveal delay={0.2}>
         <a
           className="resume-download"
-          href="/assets/resume.pdf"
+          href="/eric_m26.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
