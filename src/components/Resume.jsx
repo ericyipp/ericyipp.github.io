@@ -37,7 +37,7 @@ const EDUCATION = [
     role: 'B.A. in Data Science',
     company: 'University of California, Berkeley',
     date: 'Aug 2022 - May 2026',
-    desc: 'Bachelor of Arts in Data Science, Graduated May 2026.',
+    desc: 'Bachelor of Arts in Data Science, graduated May 2026.',
     tags: ['Data Structures & Algorithms', 'Machine Learning', 'Data Engineering'],
     details: 'Relevant coursework: Data Structures & Algorithms, Principles & Techniques of Data Science, Concepts of Probability, Data Engineering, Data Mining, and Machine Learning & Data Analytics.',
   },
@@ -47,7 +47,7 @@ const PROJECTS = [
   {
     role: 'UC Berkeley Chinese Student Association Website',
     company: 'React, TypeScript, Node.js, GitHub',
-    date: 'Aug 2025 — May 2026',
+    date: 'Aug 2025 - May 2026',
     desc: 'Built a responsive web application serving 1,600+ members with event listings, cultural resources, and a team directory using React and TypeScript.',
     tags: ['React', 'TypeScript', 'Node.js', 'GitHub'],
     details: 'Implemented an admin dashboard with a content management system, reducing event posting time by 75% and enabling real-time content updates.',

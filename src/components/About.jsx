@@ -32,21 +32,15 @@ export default function About() {
 
           <ScrollReveal delay={0.15}>
             <p className="about-text">
-              Hello! I'm Eric Yip — a Data Science student at UC Berkeley
-              graduating in May 2026. I've interned as a Data Scientist at
-              DoorDash, where I built and deployed ML models end-to-end, and
-              worked as a Data Analyst at U4U through the Berkeley SkyDeck
-              accelerator program.
+              Hello! I recently graduated from UC Berkeley with a Bachelor of Arts in Data Science.
+              I had the opportunity to work as a Data Analyst Intern at U4U, focusing on growth analytics,
+              and at DoorDash as a Data Science Intern working on automating ops workflows with ML.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="about-text">
-              I love turning messy datasets into actionable insights, shipping
-              production models, and building tools that people actually use.
-              Whether it's writing SQL at scale, designing A/B tests, or
-              crafting interactive dashboards — I thrive at the intersection
-              of data and impact.
+              This fall, I'll be joining Shopify in New York City as a Data Engineer Intern, continuing to build and leverage analytics.
             </p>
           </ScrollReveal>
         </div>

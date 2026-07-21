@@ -53,6 +53,27 @@ export default function CursorTrail() {
       }
     }
 
+    // Small radial pop of the same sparkles at the click point
+    const onDown = (e) => {
+      const count = 7
+      for (let i = 0; i < count; i++) {
+        if (particles.length >= MAX_PARTICLES) break
+        const angle = (i / count) * Math.PI * 2 + Math.random() * 0.5
+        const speed = 1.2 + Math.random() * 1.4
+        particles.push({
+          x: e.clientX,
+          y: e.clientY,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - 0.6, // slight upward bias against gravity
+          size: Math.random() * 6 + 5,       // a touch smaller than trail sparkles
+          life: 1,
+          decay: 0.03 + Math.random() * 0.018, // fades faster — subtle pop
+          hue: 35 + Math.random() * 25,
+          symbol: SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)],
+        })
+      }
+    }
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -81,10 +102,12 @@ export default function CursorTrail() {
     }
 
     document.addEventListener('mousemove', onMove)
+    document.addEventListener('mousedown', onDown)
     rafId = requestAnimationFrame(animate)
 
     return () => {
       document.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mousedown', onDown)
       window.removeEventListener('resize', resize)
       if (rafId) cancelAnimationFrame(rafId)
     }

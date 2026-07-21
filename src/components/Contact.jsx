@@ -26,9 +26,7 @@ export default function Contact() {
 
         <ScrollReveal delay={0.1}>
           <p className="contact-text">
-            I'm always open to new opportunities, collaborations, or just a
-            friendly conversation about data, ML, or anything creative. Feel
-            free to reach out!
+            Always open to connect! Feel free to shoot me a message on LinkedIn or by email.
           </p>
         </ScrollReveal>
 

@@ -19,7 +19,8 @@
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  z-index: 10;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Left Content: Headline + Bio + CTAs ─────────────────── */
@@ -34,36 +35,20 @@
   flex-direction: column;
 }
 
-.hero-greeting {
-  font-family: var(--font-mono);
-  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
-  color: var(--accent-gold);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: var(--space-sm);
-  font-weight: 600;
-}
-
 .hero-name {
   font-family: var(--font-display);
   font-size: clamp(3.8rem, 10vw, 8.2rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 0.85;
   color: var(--text-primary);
   letter-spacing: -0.06em;
   margin: 0;
   padding: 0;
-  filter: url(#liquid-distortion); /* Hook the custom liquid filter */
-  cursor: pointer;
   user-select: none;
-  display: inline-block;
-  transform: translate3d(0, 0, 0); /* Force GPU layer */
+  display: block;
 }
 
-.hero-name .thin {
-  font-weight: 200;
-  letter-spacing: -0.03em;
-}
+
 
 /* Bottom Meta Column */
 .hero-bottom-meta {
@@ -80,6 +65,18 @@
   line-height: 1.75;
   color: var(--text-secondary);
   font-weight: 400;
+}
+
+.hero-bio-link {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--text-primary);
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+.hero-bio-link:hover {
+  color: var(--accent);
 }
 
 /* CTA buttons */
@@ -114,20 +111,6 @@
   background: var(--accent-hover);
   box-shadow: 0 6px 28px var(--accent-glow);
   transform: translateY(-3px);
-}
-
-.hero-btn-ghost {
-  border: 1.5px solid var(--border-hover);
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  box-shadow: var(--shadow-sm);
-}
-
-.hero-btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
 }
 
 /* ── Right Content: Asymmetrical Photo + Circular Badge ─── */
