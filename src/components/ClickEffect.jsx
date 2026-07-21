@@ -64,12 +64,14 @@ const CSS = `
 
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default function ClickEffect() {
+export default function ClickEffect({ onHit }) {
   const [effects, setEffects] = useState([])
 
   const spawn = useCallback((x, y) => {
     const id = _id++
     const { text, type } = rollDamage()
+
+    onHit?.(type === 'miss' ? 0 : parseInt(text, 10))
 
     // Slight horizontal jitter so repeated clicks don't perfectly stack
     const jitterX = (Math.random() - 0.5) * 24
@@ -84,7 +86,7 @@ export default function ClickEffect() {
 
     // Clean up after animation finishes
     setTimeout(() => setEffects((prev) => prev.filter((e) => e.id !== id)), 1200)
-  }, [])
+  }, [onHit])
 
   useEffect(() => {
     const mq = window.matchMedia('(pointer: fine)')

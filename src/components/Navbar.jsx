@@ -61,43 +61,45 @@ export default function Navbar() {
   }
 
   return (
-    <motion.header
-      className={`navbar${scrolled ? ' scrolled' : ''}`}
-      initial={{ y: -64, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-    >
-      <a
-        className="nav-brand"
-        href="#home"
-        onClick={(e) => handleNavClick(e, '#home')}
+    <>
+      <motion.header
+        className={`navbar${scrolled ? ' scrolled' : ''}`}
+        initial={{ y: -64, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
       >
-        ericy
-      </a>
+        <a
+          className="nav-brand"
+          href="#home"
+          onClick={(e) => handleNavClick(e, '#home')}
+        >
+          eric<span className="thin">y</span>
+        </a>
 
-      <nav className="nav-links">
-        {NAV_ITEMS.map((item) => {
-          const sectionId = item.href.replace('#', '')
-          return (
-            <a
-              key={item.label}
-              className={`nav-link${activeSection === sectionId ? ' active' : ''}`}
-              href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
-            >
-              {item.label}
-            </a>
-          )
-        })}
-      </nav>
+        <nav className="nav-links">
+          {NAV_ITEMS.map((item) => {
+            const sectionId = item.href.replace('#', '')
+            return (
+              <a
+                key={item.label}
+                className={`nav-link${activeSection === sectionId ? ' active' : ''}`}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+              >
+                {item.label}
+              </a>
+            )
+          })}
+        </nav>
 
-      <button
-        className={`nav-hamburger${mobileOpen ? ' open' : ''}`}
-        onClick={() => setMobileOpen(!mobileOpen)}
-        aria-label="Toggle menu"
-      >
-        <span /><span /><span />
-      </button>
+        <button
+          className={`nav-hamburger${mobileOpen ? ' open' : ''}`}
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          <span /><span /><span />
+        </button>
+      </motion.header>
 
       <AnimatePresence>
         {mobileOpen && (
@@ -126,6 +128,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   )
 }

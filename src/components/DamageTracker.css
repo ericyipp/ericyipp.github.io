@@ -1,0 +1,32 @@
+/* ── Damage tracker HUD ───────────────────────────────────── */
+.damage-tracker {
+  position: fixed;
+  bottom: clamp(1rem, 3vw, 1.75rem);
+  right: clamp(1rem, 3vw, 1.75rem);
+  z-index: 9998;
+  pointer-events: none;
+  animation: dmg-tracker-fade-in 0.5s var(--ease-out) both;
+}
+
+.damage-tracker-value {
+  font-family: 'Press Start 2P', var(--font-mono), monospace;
+  font-size: 0.95rem;
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+  transition: transform 0.18s var(--ease-spring);
+}
+
+.damage-tracker-pulse .damage-tracker-value {
+  transform: scale(1.2);
+}
+
+@keyframes dmg-tracker-fade-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.92); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 480px) {
+  .damage-tracker-value {
+    font-size: 0.8rem;
+  }
+}

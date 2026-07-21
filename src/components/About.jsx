@@ -14,16 +14,19 @@ export default function About() {
         {/* Left column — bio */}
         <div>
           <ScrollReveal>
-            <div className="avatar-card">
-              <div className="avatar-card-inner">
-                <img src="/pictures/headshot.png" className="avatar-photo" alt="Eric Yip" />
+            <div className="avatar-wrap">
+              <div className="avatar-card">
+                <div className="avatar-card-inner">
+                  <img src="/pictures/photo2-avatar.png" className="avatar-photo" alt="Eric Yip" />
+                </div>
               </div>
+              <img src="/hi%20gif.gif" className="avatar-hi-gif" alt="hi!" />
             </div>
           </ScrollReveal>
 
           <ScrollReveal>
             <h2 className="about-heading">
-              About me
+              about <span className="thin">me</span>
             </h2>
           </ScrollReveal>
 

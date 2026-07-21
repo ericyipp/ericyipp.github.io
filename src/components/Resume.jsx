@@ -37,7 +37,7 @@ const EDUCATION = [
     role: 'B.A. in Data Science',
     company: 'University of California, Berkeley',
     date: 'Aug 2022 - May 2026',
-    desc: 'Bachelor of Arts in Data Science, graduating May 2026.',
+    desc: 'Bachelor of Arts in Data Science, Graduated May 2026.',
     tags: ['Data Structures & Algorithms', 'Machine Learning', 'Data Engineering'],
     details: 'Relevant coursework: Data Structures & Algorithms, Principles & Techniques of Data Science, Concepts of Probability, Data Engineering, Data Mining, and Machine Learning & Data Analytics.',
   },
@@ -166,7 +166,7 @@ export default function Resume() {
     <section className="resume" id="resume">
       <ScrollReveal>
         <h2 className="resume-heading">
-          Where I've been
+          re<span className="thin">sume</span>
         </h2>
       </ScrollReveal>
 

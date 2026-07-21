@@ -20,7 +20,7 @@ export default function Contact() {
       <section className="contact" id="contact">
         <ScrollReveal>
           <h2 className="contact-heading">
-            let's connect! :D
+            let's <span className="thin">connect!</span>
           </h2>
         </ScrollReveal>
 
