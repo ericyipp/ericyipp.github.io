@@ -1,12 +1,13 @@
 /* ── Hero section ─────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: var(--space-4xl) var(--page-gutter);
+  padding-left: clamp(2rem, 10vw, 8rem);
   overflow: hidden;
 }
 
@@ -14,7 +15,7 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  text-align: center;
+  text-align: left;
   max-width: 720px;
 }
 
@@ -77,7 +78,7 @@
 .hero-ctas {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--space-md);
   flex-wrap: wrap;
 }
@@ -121,43 +122,21 @@
   box-shadow: var(--shadow-md);
 }
 
-/* ── Scroll indicator ─────────────────────────────────────── */
-.hero-scroll {
-  position: absolute;
-  bottom: var(--space-2xl);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
-  color: var(--text-muted);
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: lowercase;
-}
-
-.hero-scroll-line {
-  width: 1.5px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
-  animation: scroll-pulse 2s ease-in-out infinite;
-}
-
-@keyframes scroll-pulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(1); }
-  50%      { opacity: 0.8; transform: scaleY(1.2); }
-}
-
 @media (max-width: 768px) {
   .hero {
     padding-top: 100px;
+    padding-left: var(--page-gutter);
+    align-items: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    width: 100%;
   }
 
   .hero-ctas {
     flex-direction: column;
+    align-items: center;
   }
 
   .hero-btn {

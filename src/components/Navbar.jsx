@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Navbar.css'
 
@@ -9,14 +9,42 @@ const NAV_ITEMS = [
   { label: 'contact', href: '#contact' },
 ]
 
+const SECTION_IDS = ['home', 'about', 'resume', 'contact']
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
 
+  // Scroll backdrop
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Active section tracking via IntersectionObserver
+  useEffect(() => {
+    const observers = []
+    const visibleMap = {}
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          visibleMap[id] = entry.isIntersecting
+          // Pick the first visible section in document order
+          const active = SECTION_IDS.find((s) => visibleMap[s])
+          if (active) setActiveSection(active)
+        },
+        { threshold: 0.35 }
+      )
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach((o) => o.disconnect())
   }, [])
 
   // Lock body scroll when mobile drawer is open
@@ -48,17 +76,19 @@ export default function Navbar() {
       </a>
 
       <nav className="nav-links">
-        {NAV_ITEMS.map((item, i) => (
-          <a
-            key={item.label}
-            className="nav-link"
-            href={item.href}
-            onClick={(e) => handleNavClick(e, item.href)}
-          >
-            <span className="nav-link-idx">0{i + 1}.</span>
-            {item.label}
-          </a>
-        ))}
+        {NAV_ITEMS.map((item) => {
+          const sectionId = item.href.replace('#', '')
+          return (
+            <a
+              key={item.label}
+              className={`nav-link${activeSection === sectionId ? ' active' : ''}`}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+            >
+              {item.label}
+            </a>
+          )
+        })}
       </nav>
 
       <button
@@ -77,20 +107,22 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {NAV_ITEMS.map((item, i) => (
-              <motion.a
-                key={item.label}
-                className="nav-link"
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <span className="nav-link-idx">0{i + 1}.</span>
-                {item.label}
-              </motion.a>
-            ))}
+            {NAV_ITEMS.map((item, i) => {
+              const sectionId = item.href.replace('#', '')
+              return (
+                <motion.a
+                  key={item.label}
+                  className={`nav-link${activeSection === sectionId ? ' active' : ''}`}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  {item.label}
+                </motion.a>
+              )
+            })}
           </motion.div>
         )}
       </AnimatePresence>

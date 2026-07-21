@@ -15,15 +15,6 @@
   letter-spacing: -0.02em;
 }
 
-.resume-heading .section-idx {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-  display: block;
-  margin-bottom: var(--space-sm);
-  font-weight: 500;
-}
-
 /* ── Tab selector ─────────────────────────────────────────── */
 .resume-tabs {
   display: flex;
@@ -129,12 +120,12 @@
   box-shadow: 0 0 12px var(--accent-glow);
 }
 
-/* One pop color per card, cycling through the palette */
-.timeline-card--c0 { --tag-color: var(--accent-2); }
-.timeline-card--c1 { --tag-color: var(--accent-3); }
-.timeline-card--c2 { --tag-color: var(--accent-red); }
-.timeline-card--c3 { --tag-color: var(--accent-blue); }
-.timeline-card--c4 { --tag-color: var(--accent-warm); }
+/* All timeline dots use the gold accent for consistency */
+.timeline-card--c0,
+.timeline-card--c1,
+.timeline-card--c2,
+.timeline-card--c3,
+.timeline-card--c4 { --tag-color: var(--accent-gold); }
 
 .timeline-card-header {
   display: flex;

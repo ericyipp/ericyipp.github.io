@@ -8,24 +8,24 @@ const TABS = ['experience', 'education', 'projects']
 const EXPERIENCE = [
   {
     role: 'Data Engineer Intern (Incoming)',
-    company: 'Shopify — New York, NY',
-    date: 'Sep 2026 — Dec 2026',
+    company: 'Shopify - New York, NY',
+    date: 'Sep 2026 - Dec 2026',
     desc: 'Incoming Data Engineer at Shopify, starting September 2026.',
     tags: ['Data Engineering'],
     details: '',
   },
   {
     role: 'Data Scientist Intern',
-    company: 'DoorDash — San Francisco, CA',
-    date: 'Jun 2025 — Aug 2025',
+    company: 'DoorDash - San Francisco, CA',
+    date: 'Jun 2025 - Aug 2025',
     desc: 'Built and deployed an ML model end-to-end, from feature engineering across multiple operational datasets to a production UI used by ops teams, automating 90% of manual data collection workflows.',
     tags: ['Python', 'SQL', 'Sigma', 'A/B Testing'],
     details: 'Collaborated with product and operations teams to define model requirements, success metrics, and rollout criteria, documenting findings to keep stakeholders aligned across review cycles. Designed and executed A/B tests in Sigma to evaluate model performance and validate operational impact across production workflows. Wrote SQL queries to extract and clean large-scale datasets, and used Python for feature engineering and exploratory analysis throughout the model development lifecycle.',
   },
   {
     role: 'Data Analyst Intern',
-    company: 'U4U Teen — Berkeley SkyDeck Pad-13 Accelerator',
-    date: 'Sep 2024 — Dec 2024',
+    company: 'U4U Teen - Berkeley SkyDeck Pad-13 Accelerator',
+    date: 'Sep 2024 - Dec 2024',
     desc: 'Analyzed user sign-up rates, task completion, and retention metrics using Python, Pandas, and Matplotlib, summarizing findings in weekly reports shared with the founding team.',
     tags: ['Python', 'Pandas', 'Matplotlib', 'Google Analytics'],
     details: 'Built data visualizations to surface user engagement trends and presented them to investors and stakeholders during funding discussions. Developed an impact report using Google Analytics and Python that tracked key behavioral metrics and helped the team assess readiness for public launch.',
@@ -36,7 +36,7 @@ const EDUCATION = [
   {
     role: 'B.A. in Data Science',
     company: 'University of California, Berkeley',
-    date: 'Aug 2022 — May 2026',
+    date: 'Aug 2022 - May 2026',
     desc: 'Bachelor of Arts in Data Science, graduating May 2026.',
     tags: ['Data Structures & Algorithms', 'Machine Learning', 'Data Engineering'],
     details: 'Relevant coursework: Data Structures & Algorithms, Principles & Techniques of Data Science, Concepts of Probability, Data Engineering, Data Mining, and Machine Learning & Data Analytics.',
@@ -166,7 +166,6 @@ export default function Resume() {
     <section className="resume" id="resume">
       <ScrollReveal>
         <h2 className="resume-heading">
-          <span className="section-idx">03. resume</span>
           Where I've been
         </h2>
       </ScrollReveal>

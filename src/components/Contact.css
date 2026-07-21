@@ -16,15 +16,6 @@
   letter-spacing: -0.02em;
 }
 
-.contact-heading .section-idx {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-  display: block;
-  margin-bottom: var(--space-sm);
-  font-weight: 500;
-}
-
 .contact-text {
   font-size: 1.05rem;
   color: var(--text-secondary);
@@ -57,23 +48,17 @@
 }
 
 .contact-icon:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
   transform: translateY(-5px) rotate(-3deg);
-  box-shadow: 0 8px 28px var(--accent-glow);
+  box-shadow: 0 8px 28px var(--accent-gold-glow);
 }
 
 .contact-icon:nth-child(2):hover {
-  color: var(--accent-2);
-  border-color: var(--accent-2);
-  box-shadow: 0 8px 28px var(--accent-2-glow);
   transform: translateY(-5px) rotate(3deg);
 }
 
 .contact-icon:nth-child(3):hover {
-  color: var(--accent-3);
-  border-color: var(--accent-3);
-  box-shadow: 0 8px 28px var(--accent-3-glow);
   transform: translateY(-5px) rotate(-2deg);
 }
 
@@ -173,6 +158,44 @@
 .contact-email.copied {
   background: #22c55e;
   box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35);
+}
+
+/* ── Mobile ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--space-3xl) var(--page-gutter);
+  }
+
+  .contact-links {
+    gap: var(--space-md);
+  }
+
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-email-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-email {
+    width: 100%;
+    max-width: 360px;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 1rem 1.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Tooltip is hover-only — hide on touch devices entirely */
+@media (hover: none) {
+  .copy-tooltip {
+    display: none;
+  }
 }
 
 /* ── Footer ───────────────────────────────────────────────── */

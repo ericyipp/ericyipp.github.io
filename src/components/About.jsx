@@ -23,8 +23,7 @@ export default function About() {
 
           <ScrollReveal>
             <h2 className="about-heading">
-              <span className="section-idx">02. about</span>
-              A bit about me
+              About me
             </h2>
           </ScrollReveal>
 

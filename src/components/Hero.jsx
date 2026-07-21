@@ -55,16 +55,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </motion.div>
-
-      <motion.div
-        className="hero-scroll"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-      >
-        <span className="hero-scroll-line" />
-        scroll
-      </motion.div>
     </section>
   )
 }

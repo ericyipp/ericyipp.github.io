@@ -20,21 +20,10 @@
   --accent-glow:    rgba(26, 26, 26, 0.18);
   --accent-subtle:  rgba(26, 26, 26, 0.06);
 
-  --accent-2:       #7b6cf6;
-  --accent-2-glow:  rgba(123, 108, 246, 0.2);
-  --accent-2-subtle:rgba(123, 108, 246, 0.07);
-
-  --accent-3:       #43c9a7;
-  --accent-3-glow:  rgba(67, 201, 167, 0.2);
-
-  --accent-warm:      #f4a261;
-  --accent-warm-glow: rgba(244, 162, 97, 0.2);
-
-  --accent-red:      #e14848;
-  --accent-red-glow: rgba(225, 72, 72, 0.2);
-
-  --accent-blue:      #2f80ed;
-  --accent-blue-glow: rgba(47, 128, 237, 0.2);
+  /* Single highlight accent — warm gold echoing the MapleStory cursor trail */
+  --accent-gold:      #C9922E;
+  --accent-gold-glow: rgba(201, 146, 46, 0.25);
+  --accent-gold-subtle: rgba(201, 146, 46, 0.08);
 
   --border:         rgba(26, 26, 26, 0.06);
   --border-hover:   rgba(26, 26, 26, 0.12);
@@ -126,6 +115,15 @@ button {
   border: none;
   background: none;
   color: inherit;
+}
+
+/* ── Global tactile press feedback ────────────────────────── */
+button:active,
+a.hero-btn:active,
+a.resume-download:active,
+a.contact-icon:active {
+  transform: scale(0.97) translateY(1px) !important;
+  transition-duration: 80ms !important;
 }
 
 ul, ol {
