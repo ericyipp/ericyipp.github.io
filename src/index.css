@@ -97,11 +97,11 @@
 
 :root {
   /* ── Color palette — warm & bright ─────────────────────── */
-  --bg-primary:    #fdf6ee;
-  --bg-secondary:  #f7efe3;
+  --bg-primary:    #ffffff;
+  --bg-secondary:  #ffffff;
   --bg-card:       #ffffff;
-  --bg-card-hover: #fffaf5;
-  --bg-glass:      rgba(253, 246, 238, 0.78);
+  --bg-card-hover: #fafafa;
+  --bg-glass:      rgba(255, 255, 255, 0.78);
 
   --text-primary:   #1a1a1a;
   --text-secondary: #5c5c5c;
@@ -113,9 +113,9 @@
   --accent-subtle:  rgba(26, 26, 26, 0.06);
 
   /* Single highlight accent — warm gold echoing the MapleStory cursor trail */
-  --accent-gold:      #C9922E;
-  --accent-gold-glow: rgba(201, 146, 46, 0.25);
-  --accent-gold-subtle: rgba(201, 146, 46, 0.08);
+  --accent-gold:      #c4e3ff;
+  --accent-gold-glow: rgba(196, 227, 255, 0.25);
+  --accent-gold-subtle: rgba(196, 227, 255, 0.08);
 
   --border:         rgba(26, 26, 26, 0.06);
   --border-hover:   rgba(26, 26, 26, 0.12);
@@ -170,6 +170,7 @@
 }
 
 html {
+  font-size: 18px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

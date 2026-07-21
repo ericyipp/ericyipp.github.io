@@ -22,7 +22,7 @@ export default function Hero() {
         >
           <motion.div className="hero-heading-wrapper" variants={childVariants}>
             <h1 className="hero-name">
-              Eric <span className="thin">Yip</span>
+              Eric Yip
             </h1>
           </motion.div>
 

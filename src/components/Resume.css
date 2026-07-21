@@ -83,13 +83,6 @@
   box-shadow: 0 4px 24px var(--accent-glow);
 }
 
-/* All timeline cards use the gold accent for consistency */
-.timeline-card--c0,
-.timeline-card--c1,
-.timeline-card--c2,
-.timeline-card--c3,
-.timeline-card--c4 { --tag-color: var(--accent-gold); }
-
 .timeline-card-header {
   display: flex;
   align-items: flex-start;
@@ -124,7 +117,9 @@
 }
 
 .timeline-card-desc {
+  font-family: var(--font-body);
   font-size: 0.92rem;
+  font-weight: 500;
   color: var(--text-secondary);
   line-height: 1.7;
   overflow: hidden;
@@ -143,9 +138,9 @@
   font-weight: 700;
   padding: 0.22rem 0.6rem;
   border-radius: var(--radius-sm);
-  background: var(--accent-subtle);
-  color: var(--tag-color, var(--accent));
-  border: 1px solid color-mix(in srgb, var(--tag-color, var(--accent)) 15%, transparent);
+  background: var(--accent-gold);
+  color: var(--text-primary);
+  border: 1px solid color-mix(in srgb, var(--accent-gold) 70%, #1a1a1a 30%);
 }
 
 /* ── Expand/collapse ──────────────────────────────────────── */

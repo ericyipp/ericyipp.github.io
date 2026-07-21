@@ -41,7 +41,6 @@
   font-weight: 700;
   line-height: 0.85;
   color: var(--text-primary);
-  letter-spacing: -0.06em;
   margin: 0;
   padding: 0;
   user-select: none;
@@ -64,7 +63,7 @@
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--text-secondary);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hero-bio-link {
@@ -102,14 +101,14 @@
 }
 
 .hero-btn-primary {
-  background: var(--accent);
-  color: #fff;
-  box-shadow: 0 4px 16px var(--accent-glow);
+  background: var(--accent-gold);
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px var(--accent-gold-glow);
 }
 
 .hero-btn-primary:hover {
-  background: var(--accent-hover);
-  box-shadow: 0 6px 28px var(--accent-glow);
+  background: color-mix(in srgb, var(--accent-gold) 85%, #1a1a1a 15%);
+  box-shadow: 0 6px 28px var(--accent-gold-glow);
   transform: translateY(-3px);
 }
 

@@ -23,7 +23,9 @@
 }
 
 .about-text {
+  font-family: var(--font-body);
   font-size: 1.05rem;
+  font-weight: 500;
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: var(--space-xl);
