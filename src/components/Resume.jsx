@@ -146,19 +146,6 @@ function TimelineCard({ item, index }) {
    ──────────────────────────────────────────────────────────── */
 export default function Resume() {
   const [activeTab, setActiveTab] = useState('experience')
-  const tabRefs = useRef({})
-  const [indicatorStyle, setIndicatorStyle] = useState({})
-
-  // Animate the pill indicator to the active tab
-  useEffect(() => {
-    const el = tabRefs.current[activeTab]
-    if (el) {
-      setIndicatorStyle({
-        left: el.offsetLeft,
-        width: el.offsetWidth,
-      })
-    }
-  }, [activeTab])
 
   const items = DATA_MAP[activeTab] || []
 
@@ -177,18 +164,19 @@ export default function Resume() {
             {TABS.map((tab) => (
               <button
                 key={tab}
-                ref={(el) => (tabRefs.current[tab] = el)}
                 className={`resume-tab${activeTab === tab ? ' active' : ''}`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
+                {activeTab === tab && (
+                  <motion.div
+                    layoutId="resumeTabIndicator"
+                    className="resume-tab-indicator"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
               </button>
             ))}
-            <motion.div
-              className="resume-tab-indicator"
-              animate={indicatorStyle}
-              transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-            />
           </div>
         </div>
       </ScrollReveal>
