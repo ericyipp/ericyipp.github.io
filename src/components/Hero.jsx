@@ -93,7 +93,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Bio & CTAs */}
+          {/* Bio */}
           <motion.div className="hero-bottom-meta" variants={childFadeVariants}>
             <p className="hero-bio">
               Hello and welcome to my portfolio! I'm a recent graduate from UC Berkeley with a degree in Data Science. I love working and unlocking opportunities with data. Feel free to explore my resume and projects. I also love connecting with new people so{' '}
@@ -101,18 +101,6 @@ export default function Hero() {
                 feel free to reach out
               </a>!
             </p>
-
-            <div className="hero-ctas">
-              <motion.a
-                className="hero-btn hero-btn-primary"
-                href="#resume"
-                whileHover={{ y: -3, scale: 1.03 }}
-                whileTap={{ scale: 0.96, y: 0 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 15 }}
-              >
-                view resume ↓
-              </motion.a>
-            </div>
           </motion.div>
         </motion.div>
 
@@ -126,6 +114,27 @@ export default function Hero() {
         >
           <TiltPhotoCard />
         </motion.div>
+      </div>
+
+      {/* Scroll-to-resume indicator, bottom-center of the section */}
+      <div className="hero-scroll-cta-wrap">
+        <motion.a
+          href="#resume"
+          className="hero-scroll-cta"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          whileHover={{ y: -2 }}
+        >
+          <span className="hero-scroll-cta-label">view resume</span>
+          <motion.span
+            className="hero-scroll-cta-arrow"
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            ↓
+          </motion.span>
+        </motion.a>
       </div>
     </section>
   )

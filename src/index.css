@@ -178,6 +178,7 @@ html {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  scrollbar-color: var(--accent-gold) transparent;
 }
 
 body {
@@ -235,7 +236,7 @@ button {
 
 /* ── Global tactile press feedback ────────────────────────── */
 button:active,
-a.hero-btn:active,
+a.hero-scroll-cta:active,
 a.resume-download:active,
 a.contact-icon:active {
   transform: scale(0.97) translateY(1px) !important;
@@ -256,12 +257,12 @@ ul, ol {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: var(--accent-gold);
   border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
+  background: color-mix(in srgb, var(--accent-gold) 80%, #1a1a1a 20%);
 }
 
 /* ── Selection ────────────────────────────────────────────── */

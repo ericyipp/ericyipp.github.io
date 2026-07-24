@@ -174,25 +174,35 @@
 .resume-download {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 0.4rem;
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 600;
   margin-top: var(--space-2xl);
-  padding: 0.8rem 1.6rem;
-  border-radius: var(--radius-full);
-  border: 1.5px solid var(--border-hover);
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--duration-base) var(--ease-out);
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
-.resume-download:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 24px var(--accent-glow);
+.resume-download-label {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+.resume-download-arrow {
+  display: inline-block;
+  color: var(--accent-gold);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.resume-download:hover .resume-download-label {
+  color: var(--accent-gold);
+}
+
+.resume-download:hover .resume-download-arrow {
+  transform: translateY(3px);
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { LinkedinLogo, GithubLogo, EnvelopeSimple } from '@phosphor-icons/react'
+import { LinkedinLogo, GithubLogo, EnvelopeSimple, CopySimple } from '@phosphor-icons/react'
 import ScrollReveal from './ScrollReveal'
 import './Contact.css'
 
@@ -83,7 +83,9 @@ export default function Contact() {
               whileTap={{ scale: 0.94 }}
               transition={{ type: 'spring', stiffness: 400, damping: 15 }}
             >
-              <span className="email-text">{EMAIL} →</span>
+              <span className="email-text">
+                {EMAIL} <CopySimple size={16} weight="regular" />
+              </span>
               <span className="copied-text">Copied</span>
             </motion.button>
             <span className="copy-tooltip">Copy to clipboard</span>

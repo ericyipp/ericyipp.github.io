@@ -121,7 +121,13 @@
   box-shadow: 0 8px 32px var(--accent-glow);
 }
 
-.contact-email .email-text,
+.contact-email .email-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
 .contact-email .copied-text {
   display: block;
   transition: transform 0.25s ease, opacity 0.25s ease;

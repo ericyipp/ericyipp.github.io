@@ -205,7 +205,8 @@ export default function Resume() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          ↓ download resume (pdf)
+          <span className="resume-download-label">download resume (pdf)</span>
+          <span className="resume-download-arrow">↓</span>
         </a>
       </ScrollReveal>
     </section>

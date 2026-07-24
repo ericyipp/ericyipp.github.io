@@ -83,39 +83,45 @@
   color: var(--accent);
 }
 
-/* CTA buttons - Restored original blue button style */
-.hero-ctas {
+/* Scroll-to-resume indicator — bottom-center of the hero section */
+.hero-scroll-cta-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.5rem, 4vh, 2.75rem);
+  transform: translateX(-50%); /* static wrapper owns the centering transform — Framer Motion drives the inner link's own transform, so they can't share one element */
+  z-index: 2;
+}
+
+.hero-scroll-cta {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  gap: var(--space-md);
-  flex-wrap: wrap;
+  gap: 0.4rem;
+  text-decoration: none;
 }
 
-.hero-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
+.hero-scroll-cta-label {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.85rem 1.85rem;
-  border-radius: var(--radius-full);
-  transition: all var(--duration-base) var(--ease-out);
-  letter-spacing: 0.01em;
-  text-transform: none;
-}
-
-.hero-btn-primary {
-  background: var(--accent-gold);
+  letter-spacing: 0.02em;
   color: var(--text-primary);
-  box-shadow: 0 4px 16px var(--accent-gold-glow);
-  border: none;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color var(--duration-base) var(--ease-out);
 }
 
-.hero-btn-primary:hover {
-  background: color-mix(in srgb, var(--accent-gold) 85%, #1a1a1a 15%);
-  box-shadow: 0 6px 28px var(--accent-gold-glow);
+.hero-scroll-cta:hover .hero-scroll-cta-label {
+  color: var(--accent-gold);
+}
+
+.hero-scroll-cta-arrow {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--accent-gold);
 }
 
 /* ── Right Content: Asymmetrical Photo ─── */
@@ -187,18 +193,22 @@
     text-align: center;
   }
 
-  .hero-ctas {
-    justify-content: center;
-  }
-
   .hero-visual-wrapper {
-    order: -1; /* photo above the name graphic/bio/button on mobile */
+    order: -1; /* photo above the name graphic/bio on mobile */
     justify-content: center;
     margin-bottom: var(--space-sm);
   }
 
   .hero-photo-card {
     width: clamp(180px, 50vw, 240px);
+  }
+
+  .hero-scroll-cta-wrap {
+    bottom: 1.25rem;
+  }
+
+  .hero-scroll-cta-label {
+    font-size: 0.78rem;
   }
 }
 
