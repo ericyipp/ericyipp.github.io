@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 import './About.css'
 
@@ -6,6 +7,25 @@ const DS_LIBS    = ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn']
 const LANGUAGES  = ['Python', 'SQL', 'R', 'Java', 'C/C++', 'TypeScript']
 const WEB        = ['HTML/CSS', 'React.js', 'Flask']
 const TOOLS      = ['Git', 'Snowflake', 'Sigma', 'Google Analytics', 'VS Code']
+
+// Small per-pill wobble so hovers don't all tilt identically
+function pillTilt(s) {
+  const hash = [...s].reduce((h, c) => h + c.charCodeAt(0), 0)
+  return (hash % 7) - 3
+}
+
+function SkillPill({ s }) {
+  return (
+    <motion.span
+      className="skill-pill"
+      whileHover={{ y: -4, scale: 1.06, rotate: pillTilt(s) }}
+      whileTap={{ scale: 0.94 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 12 }}
+    >
+      {s}
+    </motion.span>
+  )
+}
 
 export default function About() {
   return (
@@ -52,7 +72,7 @@ export default function About() {
               <div className="skills-label">machine learning</div>
               <div className="skills-list">
                 {ML_LIBS.map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
+                  <SkillPill key={s} s={s} />
                 ))}
               </div>
             </div>
@@ -63,7 +83,7 @@ export default function About() {
               <div className="skills-label">data science</div>
               <div className="skills-list">
                 {DS_LIBS.map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
+                  <SkillPill key={s} s={s} />
                 ))}
               </div>
             </div>
@@ -74,7 +94,7 @@ export default function About() {
               <div className="skills-label">programming languages</div>
               <div className="skills-list">
                 {LANGUAGES.map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
+                  <SkillPill key={s} s={s} />
                 ))}
               </div>
             </div>
@@ -85,7 +105,7 @@ export default function About() {
               <div className="skills-label">web technologies</div>
               <div className="skills-list">
                 {WEB.map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
+                  <SkillPill key={s} s={s} />
                 ))}
               </div>
             </div>
@@ -96,7 +116,7 @@ export default function About() {
               <div className="skills-label">tools</div>
               <div className="skills-list">
                 {TOOLS.map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
+                  <SkillPill key={s} s={s} />
                 ))}
               </div>
             </div>

@@ -124,7 +124,6 @@
 .skill-pill:hover {
   border-color: var(--accent-gold);
   color: var(--accent-gold);
-  transform: translateY(-3px);
   box-shadow: 0 6px 20px var(--accent-gold-glow);
 }
 

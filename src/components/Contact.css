@@ -50,16 +50,7 @@
 .contact-icon:hover {
   color: var(--accent-gold);
   border-color: var(--accent-gold);
-  transform: translateY(-5px) rotate(-3deg);
   box-shadow: 0 8px 28px var(--accent-gold-glow);
-}
-
-.contact-icon:nth-child(2):hover {
-  transform: translateY(-5px) rotate(3deg);
-}
-
-.contact-icon:nth-child(3):hover {
-  transform: translateY(-5px) rotate(-2deg);
 }
 
 .contact-icon svg {
@@ -127,7 +118,6 @@
 
 .contact-email:hover {
   background: var(--accent-hover);
-  transform: translateY(-3px);
   box-shadow: 0 8px 32px var(--accent-glow);
 }
 
