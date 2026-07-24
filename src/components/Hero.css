@@ -106,22 +106,13 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--text-primary);
-  text-decoration: underline;
-  text-decoration-color: var(--accent-gold);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  transition: color var(--duration-base) var(--ease-out);
-}
-
-.hero-scroll-cta:hover .hero-scroll-cta-label {
-  color: var(--accent-gold);
 }
 
 .hero-scroll-cta-arrow {
   display: block;
   font-size: 1.1rem;
   line-height: 1;
-  color: var(--accent-gold);
+  color: var(--text-primary);
 }
 
 /* ── Right Content: Asymmetrical Photo ─── */
@@ -168,7 +159,7 @@
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-xl);
     text-align: left;
   }
 

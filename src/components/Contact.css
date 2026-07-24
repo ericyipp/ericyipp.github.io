@@ -48,9 +48,9 @@
 }
 
 .contact-icon:hover {
-  color: var(--accent-gold);
-  border-color: var(--accent-gold);
-  box-shadow: 0 8px 28px var(--accent-gold-glow);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  box-shadow: 0 8px 28px var(--accent-blue-glow);
 }
 
 .contact-icon svg {
@@ -130,15 +130,12 @@
 
 .contact-email .copied-text {
   display: block;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.contact-email .copied-text {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(200%);
   opacity: 0;
   white-space: nowrap;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .contact-email.copied .email-text {
@@ -182,7 +179,7 @@
     max-width: 360px;
     justify-content: center;
     font-size: 0.9rem;
-    padding: 1rem 1.5rem;
+    padding: var(--space-md) var(--space-lg);
     -webkit-tap-highlight-color: transparent;
   }
 }

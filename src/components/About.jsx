@@ -46,7 +46,7 @@ export default function About() {
 
           <ScrollReveal>
             <h2 className="about-heading">
-              about <span className="thin">me</span>
+              about me
             </h2>
           </ScrollReveal>
 

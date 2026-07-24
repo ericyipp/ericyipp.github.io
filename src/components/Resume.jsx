@@ -153,11 +153,10 @@ export default function Resume() {
     <section className="resume" id="resume">
       <ScrollReveal>
         <h2 className="resume-heading">
-          re<span className="thin">sume</span>
+          resume
         </h2>
       </ScrollReveal>
 
-      {/* Tabs */}
       <ScrollReveal delay={0.1}>
         <div className="resume-tabs-container">
           <div className="resume-tabs">
@@ -181,7 +180,6 @@ export default function Resume() {
         </div>
       </ScrollReveal>
 
-      {/* Timeline */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
@@ -197,7 +195,6 @@ export default function Resume() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Download */}
       <ScrollReveal delay={0.2}>
         <a
           className="resume-download"
@@ -205,7 +202,7 @@ export default function Resume() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="resume-download-label">download resume (pdf)</span>
+          <span className="resume-download-label underline-cta">download resume (pdf)</span>
           <span className="resume-download-arrow">↓</span>
         </a>
       </ScrollReveal>

@@ -60,7 +60,7 @@
   left: 50%;
   width: 100%;
   height: 2px;
-  background: var(--accent-gold);
+  background: var(--accent-blue);
   border-radius: 2px;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;

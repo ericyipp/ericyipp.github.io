@@ -93,7 +93,6 @@ export default function Hero() {
             </h1>
           </div>
 
-          {/* Bio */}
           <motion.div className="hero-bottom-meta" variants={childFadeVariants}>
             <p className="hero-bio">
               Hello and welcome to my portfolio! I'm a recent graduate from UC Berkeley with a degree in Data Science. I love working and unlocking opportunities with data. Feel free to explore my resume and projects. I also love connecting with new people so{' '}
@@ -126,7 +125,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
           whileHover={{ y: -2 }}
         >
-          <span className="hero-scroll-cta-label">view resume</span>
+          <span className="hero-scroll-cta-label underline-cta">view resume</span>
           <motion.span
             className="hero-scroll-cta-arrow"
             animate={{ y: [0, 6, 0] }}

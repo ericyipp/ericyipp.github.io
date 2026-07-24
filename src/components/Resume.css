@@ -144,9 +144,9 @@
   font-weight: 700;
   padding: 0.22rem 0.6rem;
   border-radius: var(--radius-sm);
-  background: var(--accent-gold);
+  background: var(--accent-blue);
   color: var(--text-primary);
-  border: 1px solid color-mix(in srgb, var(--accent-gold) 70%, #1a1a1a 30%);
+  border: 1px solid color-mix(in srgb, var(--accent-blue) 70%, #1a1a1a 30%);
 }
 
 /* ── Expand/collapse ──────────────────────────────────────── */
@@ -183,22 +183,10 @@
   text-decoration: none;
 }
 
-.resume-download-label {
-  text-decoration: underline;
-  text-decoration-color: var(--accent-gold);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  transition: color var(--duration-base) var(--ease-out);
-}
-
 .resume-download-arrow {
   display: inline-block;
-  color: var(--accent-gold);
+  color: var(--text-primary);
   transition: transform var(--duration-base) var(--ease-out);
-}
-
-.resume-download:hover .resume-download-label {
-  color: var(--accent-gold);
 }
 
 .resume-download:hover .resume-download-arrow {
