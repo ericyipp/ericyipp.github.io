@@ -56,9 +56,9 @@
 
 :root {
   /* ── Color palette — warm & bright ─────────────────────── */
-  --bg-primary:    #ffffff;
-  --bg-secondary:  #ffffff;
-  --bg-card:       #ffffff;
+  --bg-primary:    #f2f0ef;
+  --bg-secondary:  #f2f0ef;
+  --bg-card:       #f2f0ef;
   --bg-glass:      rgba(255, 255, 255, 0.78);
 
   --text-primary:   #1a1a1a;
