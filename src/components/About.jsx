@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 import './About.css'
 
@@ -8,23 +7,8 @@ const LANGUAGES  = ['Python', 'SQL', 'R', 'Java', 'C/C++', 'TypeScript']
 const WEB        = ['HTML/CSS', 'React.js', 'Flask']
 const TOOLS      = ['Git', 'Snowflake', 'Sigma', 'Google Analytics', 'VS Code']
 
-// Small per-pill wobble so hovers don't all tilt identically
-function pillTilt(s) {
-  const hash = [...s].reduce((h, c) => h + c.charCodeAt(0), 0)
-  return (hash % 7) - 3
-}
-
 function SkillPill({ s }) {
-  return (
-    <motion.span
-      className="skill-pill"
-      whileHover={{ y: -4, scale: 1.06, rotate: pillTilt(s) }}
-      whileTap={{ scale: 0.94 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 12 }}
-    >
-      {s}
-    </motion.span>
-  )
+  return <span className="skill-pill">{s}</span>
 }
 
 export default function About() {

@@ -46,7 +46,6 @@
   background: var(--bg-card);
   border: 1.5px solid var(--border-hover);
   box-shadow: var(--shadow-lg);
-  transition: transform var(--duration-base) var(--ease-out);
 }
 
 .avatar-hi-gif {
@@ -55,13 +54,8 @@
   right: -210px;
   width: 220px;
   height: auto;
-  transform: rotate(-8deg);
   pointer-events: none;
   filter: drop-shadow(0 4px 10px rgba(26, 26, 26, 0.12));
-}
-
-.avatar-card:hover {
-  transform: scale(1.03);
 }
 
 .avatar-card-inner {
@@ -118,13 +112,6 @@
   box-shadow: var(--shadow-sm);
   transition: all var(--duration-base) var(--ease-out);
   cursor: default;
-}
-
-/* Single gold accent for all skill group hovers */
-.skill-pill:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
-  box-shadow: 0 6px 20px var(--accent-blue-glow);
 }
 
 @media (max-width: 768px) {

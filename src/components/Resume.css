@@ -85,8 +85,6 @@
 
 .timeline-card:hover {
   border-color: var(--accent);
-  transform: translateX(4px);
-  box-shadow: 0 4px 24px var(--accent-glow);
 }
 
 .timeline-card-header {
@@ -187,10 +185,6 @@
   display: inline-block;
   color: var(--text-primary);
   transition: transform var(--duration-base) var(--ease-out);
-}
-
-.resume-download:hover .resume-download-arrow {
-  transform: translateY(3px);
 }
 
 @media (max-width: 768px) {

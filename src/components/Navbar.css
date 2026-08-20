@@ -11,14 +11,11 @@
   align-items: center;
   justify-content: space-between;
   transition: background var(--duration-base) var(--ease-out),
-              box-shadow var(--duration-base) var(--ease-out),
-              backdrop-filter var(--duration-base) var(--ease-out);
+              box-shadow var(--duration-base) var(--ease-out);
 }
 
 .navbar.scrolled {
-  background: var(--bg-glass);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: var(--bg-primary);
   box-shadow: var(--shadow-sm);
 }
 
